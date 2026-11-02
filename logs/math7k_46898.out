@@ -1,0 +1,240 @@
+COMPUTE CHECK PASSED: job=46898 hostname=TC2N03 allocated_nodes=TC2N03
+{
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "cuda_runtime": "12.1",
+  "gpu": "NVIDIA L40S",
+  "peft_path": "/home/msai/changyan003/ai6130-ass2/source-v1/peft/src/peft/__init__.py",
+  "packages": {
+    "transformers": "4.38.0",
+    "accelerate": "0.28.0",
+    "datasets": "2.18.0",
+    "numpy": "1.26.4",
+    "huggingface-hub": "0.25.2"
+  },
+  "nvidia_smi": "Sun Oct 25 20:24:58 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 570.148.08             Driver Version: 570.148.08     CUDA Version: 12.8     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:C9:00.0 Off |                    0 |\n| N/A   32C    P8             32W /  350W |       3MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n"
+}
+test 1/2 accuracy=1.0000
+test 2/2 accuracy=0.5000
+Finetuning model with params:
+base_model: offline-tiny
+data_path: /tmp/tmphyir5xx5/data.json
+output_dir: /tmp/tmphyir5xx5/lora-reference
+batch_size: 2
+micro_batch_size: 2
+num_epochs: 3
+learning_rate: 0.0003
+cutoff_len: 64
+val_set_size: 2
+use_gradient_checkpointing: False
+lora_r: 2
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: None
+bottleneck_size: 4
+non_linearity: tanh
+adapter_dropout: 0.0
+use_parallel_adapter: False
+use_adapterp: False
+train_on_inputs: True
+scaling: 1.0
+adapter_name: lora
+target_modules: None
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: None
+
+trainable params: 128 || all params: 3248 || trainable%: 3.9408866995073892
+{'eval_loss': 2.8528759479522705, 'eval_runtime': 0.0027, 'eval_samples_per_second': 733.014, 'eval_steps_per_second': 366.507, 'epoch': 0.25}
+{'eval_loss': 2.851041555404663, 'eval_runtime': 0.002, 'eval_samples_per_second': 1006.19, 'eval_steps_per_second': 503.095, 'epoch': 0.5}
+{'eval_loss': 2.8498048782348633, 'eval_runtime': 0.002, 'eval_samples_per_second': 1004.023, 'eval_steps_per_second': 502.011, 'epoch': 0.75}
+{'eval_loss': 2.8491809368133545, 'eval_runtime': 0.002, 'eval_samples_per_second': 1009.217, 'eval_steps_per_second': 504.608, 'epoch': 1.0}
+{'train_runtime': 1.3572, 'train_samples_per_second': 5.895, 'train_steps_per_second': 2.947, 'train_loss': 2.8521718978881836, 'epoch': 1.0}
+
+ If there's a warning about missing keys above, please disregard :)
+Finetuning model with params:
+base_model: offline-tiny
+data_path: /tmp/tmphyir5xx5/data.json
+output_dir: /tmp/tmphyir5xx5/lora-resumed
+batch_size: 2
+micro_batch_size: 2
+num_epochs: 3
+learning_rate: 0.0003
+cutoff_len: 64
+val_set_size: 2
+use_gradient_checkpointing: False
+lora_r: 2
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: None
+bottleneck_size: 4
+non_linearity: tanh
+adapter_dropout: 0.0
+use_parallel_adapter: False
+use_adapterp: False
+train_on_inputs: True
+scaling: 1.0
+adapter_name: lora
+target_modules: None
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: None
+
+trainable params: 128 || all params: 3248 || trainable%: 3.9408866995073892
+{'eval_loss': 2.8528759479522705, 'eval_runtime': 0.0021, 'eval_samples_per_second': 963.765, 'eval_steps_per_second': 481.882, 'epoch': 0.25}
+{'train_runtime': 0.0155, 'train_samples_per_second': 517.193, 'train_steps_per_second': 258.596, 'train_loss': 2.855285406112671, 'epoch': 0.25}
+Finetuning model with params:
+base_model: offline-tiny
+data_path: /tmp/tmphyir5xx5/data.json
+output_dir: /tmp/tmphyir5xx5/lora-resumed
+batch_size: 2
+micro_batch_size: 2
+num_epochs: 3
+learning_rate: 0.0003
+cutoff_len: 64
+val_set_size: 2
+use_gradient_checkpointing: False
+lora_r: 2
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: None
+bottleneck_size: 4
+non_linearity: tanh
+adapter_dropout: 0.0
+use_parallel_adapter: False
+use_adapterp: False
+train_on_inputs: True
+scaling: 1.0
+adapter_name: lora
+target_modules: None
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: /tmp/tmphyir5xx5/lora-resumed/checkpoint-1
+
+trainable params: 128 || all params: 3248 || trainable%: 3.9408866995073892
+{'eval_loss': 2.851041555404663, 'eval_runtime': 0.0021, 'eval_samples_per_second': 967.656, 'eval_steps_per_second': 483.828, 'epoch': 0.5}
+{'eval_loss': 2.8498048782348633, 'eval_runtime': 0.002, 'eval_samples_per_second': 1018.406, 'eval_steps_per_second': 509.203, 'epoch': 0.75}
+{'eval_loss': 2.8491809368133545, 'eval_runtime': 0.002, 'eval_samples_per_second': 1019.892, 'eval_steps_per_second': 509.946, 'epoch': 1.0}
+{'train_runtime': 0.0523, 'train_samples_per_second': 152.888, 'train_steps_per_second': 76.444, 'train_loss': 2.138350486755371, 'epoch': 1.0}
+
+ If there's a warning about missing keys above, please disregard :)
+Finetuning model with params:
+base_model: offline-tiny
+data_path: /tmp/tmphyir5xx5/data.json
+output_dir: /tmp/tmphyir5xx5/bottleneck-reference
+batch_size: 2
+micro_batch_size: 2
+num_epochs: 3
+learning_rate: 0.0003
+cutoff_len: 64
+val_set_size: 2
+use_gradient_checkpointing: False
+lora_r: 2
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: None
+bottleneck_size: 4
+non_linearity: tanh
+adapter_dropout: 0.0
+use_parallel_adapter: False
+use_adapterp: True
+train_on_inputs: True
+scaling: 1.0
+adapter_name: bottleneck
+target_modules: None
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: None
+
+trainable params: 128 || all params: 3248 || trainable%: 3.9408866995073892
+{'eval_loss': 2.8552820682525635, 'eval_runtime': 0.002, 'eval_samples_per_second': 994.5, 'eval_steps_per_second': 497.25, 'epoch': 0.25}
+{'eval_loss': 2.8552815914154053, 'eval_runtime': 0.0019, 'eval_samples_per_second': 1041.546, 'eval_steps_per_second': 520.773, 'epoch': 0.5}
+{'eval_loss': 2.8552815914154053, 'eval_runtime': 0.0019, 'eval_samples_per_second': 1038.323, 'eval_steps_per_second': 519.161, 'epoch': 0.75}
+{'eval_loss': 2.855281114578247, 'eval_runtime': 0.0019, 'eval_samples_per_second': 1040.383, 'eval_steps_per_second': 520.191, 'epoch': 1.0}
+{'train_runtime': 0.0706, 'train_samples_per_second': 113.314, 'train_steps_per_second': 56.657, 'train_loss': 2.8552820682525635, 'epoch': 1.0}
+
+ If there's a warning about missing keys above, please disregard :)
+Finetuning model with params:
+base_model: offline-tiny
+data_path: /tmp/tmphyir5xx5/data.json
+output_dir: /tmp/tmphyir5xx5/bottleneck-resumed
+batch_size: 2
+micro_batch_size: 2
+num_epochs: 3
+learning_rate: 0.0003
+cutoff_len: 64
+val_set_size: 2
+use_gradient_checkpointing: False
+lora_r: 2
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: None
+bottleneck_size: 4
+non_linearity: tanh
+adapter_dropout: 0.0
+use_parallel_adapter: False
+use_adapterp: True
+train_on_inputs: True
+scaling: 1.0
+adapter_name: bottleneck
+target_modules: None
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: None
+
+trainable params: 128 || all params: 3248 || trainable%: 3.9408866995073892
+{'eval_loss': 2.8552820682525635, 'eval_runtime': 0.002, 'eval_samples_per_second': 988.64, 'eval_steps_per_second': 494.32, 'epoch': 0.25}
+{'train_runtime': 0.0147, 'train_samples_per_second': 544.282, 'train_steps_per_second': 272.141, 'train_loss': 2.8552825450897217, 'epoch': 0.25}
+Finetuning model with params:
+base_model: offline-tiny
+data_path: /tmp/tmphyir5xx5/data.json
+output_dir: /tmp/tmphyir5xx5/bottleneck-resumed
+batch_size: 2
+micro_batch_size: 2
+num_epochs: 3
+learning_rate: 0.0003
+cutoff_len: 64
+val_set_size: 2
+use_gradient_checkpointing: False
+lora_r: 2
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: None
+bottleneck_size: 4
+non_linearity: tanh
+adapter_dropout: 0.0
+use_parallel_adapter: False
+use_adapterp: True
+train_on_inputs: True
+scaling: 1.0
+adapter_name: bottleneck
+target_modules: None
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: /tmp/tmphyir5xx5/bottleneck-resumed/checkpoint-1
+
+trainable params: 128 || all params: 3248 || trainable%: 3.9408866995073892
+{'eval_loss': 2.8552815914154053, 'eval_runtime': 0.0022, 'eval_samples_per_second': 910.025, 'eval_steps_per_second': 455.012, 'epoch': 0.5}
+{'eval_loss': 2.8552815914154053, 'eval_runtime': 0.002, 'eval_samples_per_second': 996.508, 'eval_steps_per_second': 498.254, 'epoch': 0.75}
+{'eval_loss': 2.855281114578247, 'eval_runtime': 0.0021, 'eval_samples_per_second': 950.982, 'eval_steps_per_second': 475.491, 'epoch': 1.0}
+{'train_runtime': 0.0417, 'train_samples_per_second': 191.882, 'train_steps_per_second': 95.941, 'train_loss': 2.1414613723754883, 'epoch': 1.0}
+
+ If there's a warning about missing keys above, please disregard :)

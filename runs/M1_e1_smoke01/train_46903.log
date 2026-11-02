@@ -1,0 +1,55 @@
+Finetuning model with params:
+base_model: openlm-research/open_llama_3b_v2
+data_path: ./ft-training_set/math_7k.json
+output_dir: /home/msai/changyan003/ai6130-ass2/runs/M1_e1_smoke01
+batch_size: 4
+micro_batch_size: 4
+num_epochs: 1
+learning_rate: 0.0003
+cutoff_len: 256
+val_set_size: 8
+use_gradient_checkpointing: False
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: None
+bottleneck_size: 256
+non_linearity: tanh
+adapter_dropout: 0.0
+use_parallel_adapter: False
+use_adapterp: False
+train_on_inputs: True
+scaling: 1.0
+adapter_name: lora
+target_modules: None
+group_by_length: False
+wandb_project: 
+wandb_run_name: 
+wandb_watch: 
+wandb_log_model: 
+resume_from_checkpoint: None
+
+/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 6851 examples [00:00, 26379.25 examples/s]Generating train split: 6851 examples [00:00, 25086.39 examples/s]
+trainable params: 2662400 || all params: 3429136000 || trainable%: 0.07764054852300988
+Map:   0%|          | 0/6843 [00:00<?, ? examples/s]Map:   1%|          | 39/6843 [00:00<00:17, 381.70 examples/s]Map:   2%|▏         | 107/6843 [00:00<00:12, 551.37 examples/s]Map:   3%|▎         | 179/6843 [00:00<00:10, 625.92 examples/s]Map:   4%|▎         | 250/6843 [00:00<00:10, 654.62 examples/s]Map:   5%|▍         | 322/6843 [00:00<00:09, 672.14 examples/s]Map:   6%|▌         | 390/6843 [00:00<00:09, 670.66 examples/s]Map:   7%|▋         | 493/6843 [00:00<00:09, 675.09 examples/s]Map:   8%|▊         | 562/6843 [00:00<00:09, 676.90 examples/s]Map:   9%|▉         | 630/6843 [00:00<00:09, 672.65 examples/s]Map:  10%|█         | 702/6843 [00:01<00:09, 681.30 examples/s]Map:  11%|█▏        | 772/6843 [00:01<00:08, 684.57 examples/s]Map:  13%|█▎        | 873/6843 [00:01<00:08, 677.71 examples/s]Map:  14%|█▍        | 942/6843 [00:01<00:08, 678.34 examples/s]Map:  15%|█▌        | 1031/6843 [00:01<00:11, 524.34 examples/s]Map:  16%|█▌        | 1102/6843 [00:01<00:10, 563.13 examples/s]Map:  17%|█▋        | 1172/6843 [00:01<00:09, 594.56 examples/s]Map:  18%|█▊        | 1241/6843 [00:01<00:09, 616.68 examples/s]Map:  19%|█▉        | 1310/6843 [00:02<00:08, 634.42 examples/s]Map:  20%|██        | 1383/6843 [00:02<00:08, 657.98 examples/s]Map:  21%|██        | 1453/6843 [00:02<00:08, 666.44 examples/s]Map:  22%|██▏       | 1525/6843 [00:02<00:07, 678.63 examples/s]Map:  23%|██▎       | 1597/6843 [00:02<00:07, 688.09 examples/s]Map:  24%|██▍       | 1667/6843 [00:02<00:07, 689.52 examples/s]Map:  25%|██▌       | 1739/6843 [00:02<00:07, 692.70 examples/s]Map:  26%|██▋       | 1813/6843 [00:02<00:07, 702.27 examples/s]Map:  28%|██▊       | 1919/6843 [00:02<00:07, 698.41 examples/s]Map:  29%|██▉       | 2000/6843 [00:03<00:08, 554.38 examples/s]Map:  30%|███       | 2070/6843 [00:03<00:08, 585.55 examples/s]Map:  31%|███▏      | 2142/6843 [00:03<00:07, 615.18 examples/s]Map:  32%|███▏      | 2214/6843 [00:03<00:07, 640.08 examples/s]Map:  33%|███▎      | 2283/6843 [00:03<00:07, 651.00 examples/s]Map:  34%|███▍      | 2354/6843 [00:03<00:06, 664.62 examples/s]Map:  35%|███▌      | 2424/6843 [00:03<00:06, 672.43 examples/s]Map:  36%|███▋      | 2496/6843 [00:03<00:06, 682.07 examples/s]Map:  37%|███▋      | 2566/6843 [00:03<00:06, 683.65 examples/s]Map:  39%|███▊      | 2636/6843 [00:04<00:06, 687.27 examples/s]Map:  40%|███▉      | 2707/6843 [00:04<00:05, 691.39 examples/s]Map:  41%|████      | 2780/6843 [00:04<00:05, 698.77 examples/s]Map:  42%|████▏     | 2851/6843 [00:04<00:05, 699.90 examples/s]Map:  43%|████▎     | 2922/6843 [00:04<00:05, 699.28 examples/s]Map:  44%|████▍     | 2994/6843 [00:04<00:05, 704.11 examples/s]Map:  45%|████▍     | 3066/6843 [00:04<00:07, 528.63 examples/s]Map:  46%|████▌     | 3136/6843 [00:04<00:06, 566.64 examples/s]Map:  47%|████▋     | 3206/6843 [00:04<00:06, 598.98 examples/s]Map:  48%|████▊     | 3273/6843 [00:05<00:05, 616.96 examples/s]Map:  49%|████▉     | 3345/6843 [00:05<00:05, 642.84 examples/s]Map:  50%|████▉     | 3417/6843 [00:05<00:05, 663.53 examples/s]Map:  51%|█████     | 3487/6843 [00:05<00:05, 667.56 examples/s]Map:  52%|█████▏    | 3556/6843 [00:05<00:04, 670.50 examples/s]Map:  53%|█████▎    | 3627/6843 [00:05<00:04, 679.10 examples/s]Map:  54%|█████▍    | 3699/6843 [00:05<00:04, 687.96 examples/s]Map:  55%|█████▌    | 3772/6843 [00:05<00:04, 697.30 examples/s]Map:  57%|█████▋    | 3879/6843 [00:05<00:04, 697.52 examples/s]Map:  58%|█████▊    | 3953/6843 [00:06<00:04, 704.74 examples/s]Map:  59%|█████▉    | 4036/6843 [00:06<00:05, 554.64 examples/s]Map:  60%|██████    | 4106/6843 [00:06<00:04, 586.54 examples/s]Map:  61%|██████    | 4178/6843 [00:06<00:04, 617.50 examples/s]Map:  62%|██████▏   | 4249/6843 [00:06<00:04, 630.90 examples/s]Map:  63%|██████▎   | 4319/6843 [00:06<00:03, 648.24 examples/s]Map:  64%|██████▍   | 4389/6843 [00:06<00:03, 659.09 examples/s]Map:  65%|██████▌   | 4462/6843 [00:06<00:03, 671.51 examples/s]Map:  66%|██████▌   | 4533/6843 [00:06<00:03, 680.78 examples/s]Map:  67%|██████▋   | 4605/6843 [00:07<00:03, 690.22 examples/s]Map:  69%|██████▉   | 4710/6843 [00:07<00:03, 689.94 examples/s]Map:  70%|██████▉   | 4781/6843 [00:07<00:02, 690.84 examples/s]Map:  71%|███████   | 4854/6843 [00:07<00:02, 700.64 examples/s]Map:  72%|███████▏  | 4933/6843 [00:07<00:02, 721.03 examples/s]Map:  74%|███████▎  | 5034/6843 [00:07<00:03, 563.14 examples/s]Map:  75%|███████▍  | 5107/6843 [00:07<00:02, 599.22 examples/s]Map:  76%|███████▌  | 5177/6843 [00:08<00:02, 620.79 examples/s]Map:  77%|███████▋  | 5245/6843 [00:08<00:02, 635.56 examples/s]Map:  78%|███████▊  | 5316/6843 [00:08<00:02, 653.88 examples/s]Map:  79%|███████▉  | 5389/6843 [00:08<00:02, 671.15 examples/s]Map:  80%|████████  | 5492/6843 [00:08<00:02, 674.04 examples/s]Map:  81%|████████▏ | 5564/6843 [00:08<00:01, 684.53 examples/s]Map:  82%|████████▏ | 5634/6843 [00:08<00:01, 686.82 examples/s]Map:  83%|████████▎ | 5705/6843 [00:08<00:01, 688.21 examples/s]Map:  85%|████████▍ | 5808/6843 [00:08<00:01, 683.82 examples/s]Map:  86%|████████▌ | 5880/6843 [00:09<00:01, 691.29 examples/s]Map:  87%|████████▋ | 5950/6843 [00:09<00:01, 692.20 examples/s]Map:  88%|████████▊ | 6033/6843 [00:09<00:01, 545.61 examples/s]Map:  89%|████████▉ | 6104/6843 [00:09<00:01, 582.24 examples/s]Map:  90%|█████████ | 6176/6843 [00:09<00:01, 613.87 examples/s]Map:  91%|█████████▏| 6247/6843 [00:09<00:00, 637.59 examples/s]Map:  92%|█████████▏| 6317/6843 [00:09<00:00, 652.52 examples/s]Map:  93%|█████████▎| 6385/6843 [00:09<00:00, 655.95 examples/s]Map:  94%|█████████▍| 6456/6843 [00:09<00:00, 666.75 examples/s]Map:  95%|█████████▌| 6527/6843 [00:10<00:00, 673.80 examples/s]Map:  96%|█████████▋| 6598/6843 [00:10<00:00, 678.62 examples/s]Map:  97%|█████████▋| 6670/6843 [00:10<00:00, 687.49 examples/s]Map:  99%|█████████▉| 6774/6843 [00:10<00:00, 687.64 examples/s]Map: 100%|██████████| 6843/6843 [00:10<00:00, 643.75 examples/s]
+Map:   0%|          | 0/8 [00:00<?, ? examples/s]Map: 100%|██████████| 8/8 [00:00<00:00, 357.08 examples/s]
+/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
+  warnings.warn(
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:03<00:10,  3.50s/it] 50%|█████     | 2/4 [00:03<00:03,  1.61s/it]
+  0%|          | 0/1 [00:00<?, ?it/s][A                                             
+                                     [A{'eval_loss': 1.5294044017791748, 'eval_runtime': 0.2485, 'eval_samples_per_second': 32.192, 'eval_steps_per_second': 4.024, 'epoch': 0.0}
+ 50%|█████     | 2/4 [00:04<00:03,  1.61s/it]
+100%|██████████| 1/1 [00:00<00:00,  7.10it/s][A
+                                             [A 75%|███████▌  | 3/4 [00:04<00:01,  1.25s/it]100%|██████████| 4/4 [00:04<00:00,  1.15it/s]
+  0%|          | 0/1 [00:00<?, ?it/s][A                                             
+                                     [A{'eval_loss': 1.495120882987976, 'eval_runtime': 0.2146, 'eval_samples_per_second': 37.285, 'eval_steps_per_second': 4.661, 'epoch': 0.0}
+100%|██████████| 4/4 [00:05<00:00,  1.15it/s]
+100%|██████████| 1/1 [00:00<00:00,  8.39it/s][A
+                                             [A                                             {'train_runtime': 5.5065, 'train_samples_per_second': 2.906, 'train_steps_per_second': 0.726, 'train_loss': 1.5095083713531494, 'epoch': 0.0}
+100%|██████████| 4/4 [00:05<00:00,  1.15it/s]100%|██████████| 4/4 [00:05<00:00,  1.38s/it]
+
+ If there's a warning about missing keys above, please disregard :)

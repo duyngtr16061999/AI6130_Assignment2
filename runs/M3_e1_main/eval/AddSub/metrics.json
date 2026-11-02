@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "correct": 11,
+  "completed": 395,
+  "total": 395,
+  "accuracy_percent": 2.7848101265822787,
+  "parse_failures": 37,
+  "generation_seconds": 4231.987787850201,
+  "subset": false
+}

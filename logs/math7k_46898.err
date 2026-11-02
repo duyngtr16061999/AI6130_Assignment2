@@ -1,0 +1,41 @@
+test_interruption_resume_and_coverage (test_evaluation_integration.EvaluationIntegrationTests) ... /home/msai/changyan003/ai6130-ass2/source-v1/evaluate.py:172: ResourceWarning: unclosed file <_io.TextIOWrapper name='dataset/AQuA/test.json' mode='r' encoding='UTF-8'>
+  json_data = json.load(open(file_path, 'r'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_checkpoint_corruption (test_persistence.PersistenceTests) ... ok
+test_corrupt_interior_rejected (test_persistence.PersistenceTests) ... ok
+test_resume_and_identity_and_lock (test_persistence.PersistenceTests) ... ok
+test_scoring_final_answer_not_first_reasoning_letter (test_persistence.PersistenceTests) ... ok
+test_truncated_tail_preserved_and_resume_no_duplicates (test_persistence.PersistenceTests) ... ok
+test_export_locks_and_hashes (test_school_tools.SchoolToolsTests) ... ok
+test_guard_refuses_unallocated_and_wrong_host (test_school_tools.SchoolToolsTests) ... ok
+test_summary_recomputes_and_rejects_duplicate_ids (test_school_tools.SchoolToolsTests) ... ok
+test_both_adapters_stop_and_resume (test_training_integration.TrainingIntegrationTests) ... Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 445.83 examples/s]
+Map:   0%|          | 0/8 [00:00<?, ? examples/s]Map: 100%|██████████| 8/8 [00:00<00:00, 402.68 examples/s]
+Map:   0%|          | 0/2 [00:00<?, ? examples/s]Map: 100%|██████████| 2/2 [00:00<00:00, 228.13 examples/s]
+/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
+  warnings.warn(
+Map:   0%|          | 0/8 [00:00<?, ? examples/s]Map: 100%|██████████| 8/8 [00:00<00:00, 803.45 examples/s]
+Map:   0%|          | 0/2 [00:00<?, ? examples/s]Map: 100%|██████████| 2/2 [00:00<00:00, 233.56 examples/s]
+/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
+  warnings.warn(
+/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
+  warnings.warn(
+/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
+  warnings.warn(
+/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
+  warnings.warn(
+/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
+  warnings.warn(
+ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 13.975s
+
+OK

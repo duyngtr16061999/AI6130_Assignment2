@@ -1,0 +1,3 @@
+{"timestamp_utc": "2026-10-25T12:36:43.968828+00:00", "event": "attempt_start", "job_id": "46905", "hostname": "TC2N01", "pid": 3247782, "config_sha256": "47d483e0eb8aaf92700445cdf84877f1509ead7ddb72a72ed1dbe9dfbeec04e0", "resume": false}
+{"timestamp_utc": "2026-10-25T12:36:43.973117+00:00", "event": "running", "job_id": "46905", "hostname": "TC2N01", "pid": 3247782, "config_sha256": "47d483e0eb8aaf92700445cdf84877f1509ead7ddb72a72ed1dbe9dfbeec04e0", "completed": 0, "total": 5}
+{"timestamp_utc": "2026-10-25T12:37:51.353485+00:00", "event": "complete", "job_id": "46905", "hostname": "TC2N01", "pid": 3247782, "config_sha256": "47d483e0eb8aaf92700445cdf84877f1509ead7ddb72a72ed1dbe9dfbeec04e0", "completed": 5, "total": 5}

@@ -1,0 +1,3 @@
+{"step": 2, "epoch": 0.0, "eval_loss": 1.5294044017791748, "eval_runtime": 0.2485, "eval_samples_per_second": 32.192, "eval_steps_per_second": 4.024}
+{"step": 4, "epoch": 0.0, "eval_loss": 1.495120882987976, "eval_runtime": 0.2146, "eval_samples_per_second": 37.285, "eval_steps_per_second": 4.661}
+{"step": 4, "epoch": 0.0, "train_runtime": 5.5065, "train_samples_per_second": 2.906, "train_steps_per_second": 0.726, "total_flos": 81757863936000.0, "train_loss": 1.5095083713531494}

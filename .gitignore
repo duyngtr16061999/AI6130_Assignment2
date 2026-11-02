@@ -1,3 +1,20 @@
 __pycache__
 .idea/*
 /peft/src/peft/__pycache__
+# Generated experiment artifacts and credentials
+# runs/
+# logs/
+trained_models/
+cache/
+exports/
+summary/
+.venv/
+.env
+.env.*
+*.egg-info/
+
+# Keep generated model weights and optimizer state local
+runs/**/*.bin
+runs/**/*.pt
+runs/**/*.pth
+runs/**/*.safetensors

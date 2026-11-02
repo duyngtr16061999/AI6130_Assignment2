@@ -1,0 +1,37 @@
+{
+  "best_metric": 1.495120882987976,
+  "best_model_checkpoint": "/home/msai/changyan003/ai6130-ass2/runs/M1_e1_smoke01/checkpoint-4",
+  "epoch": 0.0023378141437755697,
+  "eval_steps": 2,
+  "global_step": 4,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.0,
+      "eval_loss": 1.5294044017791748,
+      "eval_runtime": 0.2485,
+      "eval_samples_per_second": 32.192,
+      "eval_steps_per_second": 4.024,
+      "step": 2
+    },
+    {
+      "epoch": 0.0,
+      "eval_loss": 1.495120882987976,
+      "eval_runtime": 0.2146,
+      "eval_samples_per_second": 37.285,
+      "eval_steps_per_second": 4.661,
+      "step": 4
+    }
+  ],
+  "logging_steps": 10,
+  "max_steps": 4,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 1,
+  "save_steps": 2,
+  "total_flos": 81757863936000.0,
+  "train_batch_size": 4,
+  "trial_name": null,
+  "trial_params": null
+}

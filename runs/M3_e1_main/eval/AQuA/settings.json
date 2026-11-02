@@ -1,0 +1,48 @@
+{
+  "dataset": "AQuA",
+  "model": "",
+  "adapter": "LoRA",
+  "base_model": "TinyLlama/TinyLlama_v1.1",
+  "lora_weights": "/home/msai/changyan003/ai6130-ass2/runs/M3_e1_main/final_adapter",
+  "output_dir": "/home/msai/changyan003/ai6130-ass2/runs/M3_e1_main/eval/AQuA",
+  "model_revision": "ff3c701f2424c7625fdefb9dd470f45ef18b02d6",
+  "seed": 42,
+  "num_beams": 4,
+  "max_new_tokens": 256,
+  "use_cache": false,
+  "max_samples": null,
+  "scoring": "strict",
+  "load_8bit": false,
+  "data_sha256": "de677f5f0139340009eb01f17c0db781b4161912cd1f4efa77292f2fcf3478ee",
+  "source": {
+    "finetune.py": "9956d8419cd0f20d1e1f58d6b5d6ff686293f631dc98fb2ea8d2dada2475417c",
+    "evaluate.py": "16ab18f4856320a8f3211a90c8344be9f8062d7c14c6a94136a8745760911b36",
+    "experiment_utils.py": "79b57d0e2a67a5a5774ae67ee646c8b1991547b258b1430914f5ffb019897933",
+    "scoring.py": "f3e6e701116f76e5de4f8c3ce6e7a17b74d2dc207d33081abb358b36cf052ee3",
+    "peft/src/peft/__init__.py": "4b5f1186c74e6fff59a376222be4cf95d859e95dd00f75168c2bb6d680d9d421",
+    "peft/src/peft/mapping.py": "4716a97cb7cfde159536d449078b0729264e7f1e0e7d92ba9fffb2ebe56f6807",
+    "peft/src/peft/peft_model.py": "a10b1c6d2e4a96e2bb34a0853cfc32aa895454b13a1eeccb5d694a6d2f81386d",
+    "peft/src/peft/tuners/__init__.py": "586b16b65f9248de65ee1d9deafb26e7ac3a1b22fd60d83a44a82039495e1eab",
+    "peft/src/peft/tuners/bottleneck.py": "4d437331f23d51e4318ffeb61606c2308e183e4a7bc4705bd5c21a9cb17efc25",
+    "peft/src/peft/tuners/lora.py": "52862bb0a2df67656981478272f7d7baef223aabf70a7b6d40798318b0b5ad55",
+    "peft/src/peft/tuners/p_tuning.py": "5904bb50f03a596ff617d24113c099776057e0a8b9461701f3fe18039fa5deed",
+    "peft/src/peft/tuners/prefix_tuning.py": "1d76bd4f0bc01e9b00183b05e1ccccebc04f46b43e3db34770750ae34fc54dfc",
+    "peft/src/peft/tuners/prompt_tuning.py": "19fb26ad3ce6b55c8ffc97a121474768c4d51c34e6ff0c1d5947e2ffb44e2c72",
+    "peft/src/peft/utils/__init__.py": "f839a3c87cc7b8408d7a624e2380911cda173f6b0bff76955184369b381ab991",
+    "peft/src/peft/utils/adapters_utils.py": "b396129a50ceae44551d42075b24c4d366eec7f7b2bf5527c1b354326ad19f91",
+    "peft/src/peft/utils/config.py": "6e5b674d002c0096513df1f0bcf300c417fe4edfdd3eb646e9bad3c5eee7b794",
+    "peft/src/peft/utils/other.py": "125c0fa2a1326247aa76ee918f0aebfca65dcacd8952f0c130278dcdbd3cd9ec",
+    "peft/src/peft/utils/save_and_load.py": "6774d756c75d21107941baad10894d23f2c474dad4fdf83804a4ef6197251152"
+  },
+  "runtime": {
+    "torch": "2.2.2+cu121",
+    "transformers": "4.38.0"
+  },
+  "adapter_files": {
+    "adapter_config.json": "8d6960dcf6ed29e36025d7df1e3d9e2b660ae7b7de97755532071a2abdae487d",
+    "special_tokens_map.json": "4452b845ab9ca2afa863f59f1411a959e8a32bb4334e264b0e71d5d17dd4dcb9",
+    "tokenizer_config.json": "eabacc522d5058c6da7a755c4481667ff47f0f311048ad116eae88bcdc035448",
+    "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+    "adapter_model.bin": "38d6bda234083f696238d0d44684c6e33d00fad9e33c48725cd8ca8cadd4c2ae"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "revision": "ff3c701f2424c7625fdefb9dd470f45ef18b02d6",
+  "adapter_config": {
+    "peft_type": "LORA",
+    "base_model_name_or_path": "TinyLlama/TinyLlama_v1.1",
+    "task_type": "CAUSAL_LM",
+    "inference_mode": false,
+    "r": 8,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "merge_weights": false,
+    "fan_in_fan_out": false,
+    "enable_lora": null,
+    "bias": "none",
+    "modules_to_save": null
+  },
+  "trainable_parameters": 1126400,
+  "train_records": 6731,
+  "validation_records": 120
+}

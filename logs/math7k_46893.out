@@ -1,0 +1,487 @@
+COMPUTE CHECK PASSED: job=46893 hostname=TC2N03 allocated_nodes=TC2N03
+2 channel Terms of Service accepted
+Retrieving notices: - done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): | / - \ | / - \ | / - done
+Solving environment: | done
+
+## Package Plan ##
+
+  environment location: /home/msai/changyan003/ai6130-ass2/env
+
+  added / updated specs:
+    - pip
+    - python=3.10
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2026.10.20 |       h06a4308_0         113 KB
+    packaging-26.3             |  py310h06a4308_0         329 KB
+    pip-26.2.2                 |     pyhc872135_0         1.1 MB
+    python-3.10.22             |       hd9cb797_0        24.4 MB
+    setuptools-84.0.0          |  py310h06a4308_0         968 KB
+    wheel-0.48.0               |  py310h06a4308_0          59 KB
+    xorg-libx11-1.8.14         |       h65de747_0         820 KB
+    ------------------------------------------------------------
+                                           Total:        27.7 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-52_gnu 
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2026.10.20-h06a4308_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.44-h9e0c5a2_3 
+  libexpat           pkgs/main/linux-64::libexpat-2.9.0-h7354ed3_0 
+  libffi             pkgs/main/linux-64::libffi-3.4.8-h06d3fd0_3 
+  libgcc             pkgs/main/linux-64::libgcc-15.2.0-h69a1729_8 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-15.2.0-h166f726_8 
+  libnsl             pkgs/main/linux-64::libnsl-2.0.0-h5eee18b_0 
+  libstdcxx          pkgs/main/linux-64::libstdcxx-15.2.0-h39759b7_8 
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0 
+  libxcb             pkgs/main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  libzlib            pkgs/main/linux-64::libzlib-1.3.2-h47b2149_0 
+  ncurses            pkgs/main/linux-64::ncurses-6.6-hfaaeb4e_0 
+  openssl            pkgs/main/linux-64::openssl-3.5.9-h1b28b03_0 
+  packaging          pkgs/main/linux-64::packaging-26.3-py310h06a4308_0 
+  pip                pkgs/main/noarch::pip-26.2.2-pyhc872135_0 
+  pthread-stubs      pkgs/main/linux-64::pthread-stubs-0.3-h47b2149_2 
+  python             pkgs/main/linux-64::python-3.10.22-hd9cb797_0 
+  readline           pkgs/main/linux-64::readline-8.3-hc2a1206_0 
+  setuptools         pkgs/main/linux-64::setuptools-84.0.0-py310h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.53.4-h795bf6d_0 
+  tk                 pkgs/main/linux-64::tk-8.6.15-h54e0aa7_0 
+  tzdata             pkgs/main/noarch::tzdata-2026c-he532380_0 
+  wheel              pkgs/main/linux-64::wheel-0.48.0-py310h06a4308_0 
+  xorg-libx11        pkgs/main/linux-64::xorg-libx11-1.8.14-h65de747_0 
+  xorg-libxau        pkgs/main/linux-64::xorg-libxau-1.0.12-h9b100fa_0 
+  xorg-libxdmcp      pkgs/main/linux-64::xorg-libxdmcp-1.1.5-h9b100fa_0 
+  xorg-xorgproto     pkgs/main/linux-64::xorg-xorgproto-2025.1-h47b2149_0 
+  xz                 pkgs/main/linux-64::xz-5.8.4-h140a991_0 
+  zlib               pkgs/main/linux-64::zlib-1.3.2-h47b2149_0 
+
+
+
+Downloading and Extracting Packages: ...working...python-3.10.22       | 24.4 MB   |            |   0% 
+pip-26.2.2           | 1.1 MB    |            |   0% [A
+
+setuptools-84.0.0    | 968 KB    |            |   0% [A[A
+
+
+xorg-libx11-1.8.14   | 820 KB    |            |   0% [A[A[A
+
+
+
+packaging-26.3       | 329 KB    |            |   0% [A[A[A[A
+
+
+
+
+ca-certificates-2026 | 113 KB    |            |   0% [A[A[A[A[A
+
+
+
+
+
+wheel-0.48.0         | 59 KB     |            |   0% [A[A[A[A[A[A
+
+setuptools-84.0.0    | 968 KB    | ########## | 100% [A[A
+
+
+
+packaging-26.3       | 329 KB    | ########## | 100% [A[A[A[Apython-3.10.22       | 24.4 MB   | #1         |  12% 
+pip-26.2.2           | 1.1 MB    | #######2   |  73% [A
+
+
+xorg-libx11-1.8.14   | 820 KB    | ########## | 100% [A[A[A
+
+
+xorg-libx11-1.8.14   | 820 KB    | ########## | 100% [A[A[A
+
+
+
+
+ca-certificates-2026 | 113 KB    | #4         |  14% [A[A[A[A[A
+pip-26.2.2           | 1.1 MB    | ########## | 100% [A
+
+
+
+
+ca-certificates-2026 | 113 KB    | ########## | 100% [A[A[A[A[A
+
+
+
+
+
+wheel-0.48.0         | 59 KB     | ##7        |  27% [A[A[A[A[A[A
+
+
+
+
+
+wheel-0.48.0         | 59 KB     | ########## | 100% [A[A[A[A[A[Apython-3.10.22       | 24.4 MB   | ########## | 100% python-3.10.22       | 24.4 MB   | ########## | 100% 
+
+
+
+packaging-26.3       | 329 KB    | ########## | 100% [A[A[A[A
+
+
+
+packaging-26.3       | 329 KB    | ########## | 100% [A[A[A[A
+
+
+xorg-libx11-1.8.14   | 820 KB    | ########## | 100% [A[A[A
+
+
+
+
+ca-certificates-2026 | 113 KB    | ########## | 100% [A[A[A[A[A
+
+
+
+
+ca-certificates-2026 | 113 KB    | ########## | 100% [A[A[A[A[A
+
+
+
+
+
+wheel-0.48.0         | 59 KB     | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+wheel-0.48.0         | 59 KB     | ########## | 100% [A[A[A[A[A[A
+
+setuptools-84.0.0    | 968 KB    | ########## | 100% [A[A
+
+setuptools-84.0.0    | 968 KB    | ########## | 100% [A[A
+pip-26.2.2           | 1.1 MB    | ########## | 100% [Apython-3.10.22       | 24.4 MB   | ########## | 100%                                                      
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A done
+Preparing transaction: - \ | / - \ done
+Verifying transaction: / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Executing transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+#
+# To activate this environment, use
+#
+#     $ conda activate /home/msai/changyan003/ai6130-ass2/env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+Channel "defaults" has the following notices:
+  [warning] -- Wed Sep 30 00:00:00 2026
+  Anaconda will stop building new Python 3.10 packages on the main channel after October 31, 2026. Existing Python 3.10 packages will stay available but will no longer get new builds or security fixes. We recommend upgrading to Python 3.11 or later. Details: https://www.anaconda.com/docs/reference/policies-practices/python-version-support?utm_source=channel_notices
+
+  [info] -- Thu Aug  6 00:00:00 2026
+  main-x (Anaconda's new authenticated channel) is now generally available, with thousands of additional packages from our secure supply chain. Get started at: https://anaconda.com/docs/getting-started/main-x?utm_source=channel_notices
+
+Looking in indexes: https://download.pytorch.org/whl/cu121
+Collecting torch==2.2.2
+  Downloading torch-2.2.2%2Bcu121-cp310-cp310-linux_x86_64.whl (757.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.3/757.3 MB 108.0 MB/s  0:00:04
+Collecting filelock (from torch==2.2.2)
+  Using cached filelock-3.32.3-py3-none-any.whl.metadata (2.0 kB)
+Collecting typing-extensions>=4.8.0 (from torch==2.2.2)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting sympy (from torch==2.2.2)
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx (from torch==2.2.2)
+  Downloading networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting jinja2 (from torch==2.2.2)
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec (from torch==2.2.2)
+  Using cached fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.1.105 (from torch==2.2.2)
+  Downloading nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (23.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 124.8 MB/s  0:00:00
+Collecting nvidia-cuda-runtime-cu12==12.1.105 (from torch==2.2.2)
+  Downloading nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (823 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 823.6/823.6 kB 303.1 MB/s  0:00:00
+Collecting nvidia-cuda-cupti-cu12==12.1.105 (from torch==2.2.2)
+  Downloading nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (14.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 64.9 MB/s  0:00:00
+Collecting nvidia-cudnn-cu12==8.9.2.26 (from torch==2.2.2)
+  Downloading nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl (731.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 731.7/731.7 MB 235.1 MB/s  0:00:04
+Collecting nvidia-cublas-cu12==12.1.3.1 (from torch==2.2.2)
+  Downloading nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl (410.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.6/410.6 MB 240.6 MB/s  0:00:01
+Collecting nvidia-cufft-cu12==11.0.2.54 (from torch==2.2.2)
+  Downloading nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl (121.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 MB 146.3 MB/s  0:00:00
+Collecting nvidia-curand-cu12==10.3.2.106 (from torch==2.2.2)
+  Downloading nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl (56.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 MB 208.8 MB/s  0:00:00
+Collecting nvidia-cusolver-cu12==11.4.5.107 (from torch==2.2.2)
+  Downloading nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl (124.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 MB 199.4 MB/s  0:00:00
+Collecting nvidia-cusparse-cu12==12.1.0.106 (from torch==2.2.2)
+  Downloading nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl (196.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.0/196.0 MB 191.3 MB/s  0:00:01
+Collecting nvidia-nccl-cu12==2.19.3 (from torch==2.2.2)
+  Downloading nvidia_nccl_cu12-2.19.3-py3-none-manylinux1_x86_64.whl (158.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 158.7/158.7 MB 204.3 MB/s  0:00:00
+Collecting nvidia-nvtx-cu12==12.1.105 (from torch==2.2.2)
+  Downloading nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (99 kB)
+Collecting triton==2.2.0 (from torch==2.2.2)
+  Downloading triton-2.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (167.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.9/167.9 MB 142.0 MB/s  0:00:01
+Collecting nvidia-nvjitlink-cu12 (from nvidia-cusolver-cu12==11.4.5.107->torch==2.2.2)
+  Downloading nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.7/39.7 MB 164.3 MB/s  0:00:00
+Collecting MarkupSafe>=2.0 (from jinja2->torch==2.2.2)
+  Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->torch==2.2.2)
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached filelock-3.32.3-py3-none-any.whl (98 kB)
+Using cached fsspec-2026.7.0-py3-none-any.whl (206 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 57.8 MB/s  0:00:00
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Installing collected packages: mpmath, typing-extensions, sympy, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, networkx, MarkupSafe, fsspec, filelock, triton, nvidia-cusparse-cu12, nvidia-cudnn-cu12, jinja2, nvidia-cusolver-cu12, torch
+
+Successfully installed MarkupSafe-3.0.3 filelock-3.32.3 fsspec-2026.7.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.4.2 nvidia-cublas-cu12-12.1.3.1 nvidia-cuda-cupti-cu12-12.1.105 nvidia-cuda-nvrtc-cu12-12.1.105 nvidia-cuda-runtime-cu12-12.1.105 nvidia-cudnn-cu12-8.9.2.26 nvidia-cufft-cu12-11.0.2.54 nvidia-curand-cu12-10.3.2.106 nvidia-cusolver-cu12-11.4.5.107 nvidia-cusparse-cu12-12.1.0.106 nvidia-nccl-cu12-2.19.3 nvidia-nvjitlink-cu12-12.9.86 nvidia-nvtx-cu12-12.1.105 sympy-1.14.0 torch-2.2.2+cu121 triton-2.2.0 typing-extensions-4.16.0
+Collecting transformers==4.38.0 (from -r requirements-a40.txt (line 2))
+  Downloading transformers-4.38.0-py3-none-any.whl.metadata (131 kB)
+Collecting accelerate==0.28.0 (from -r requirements-a40.txt (line 3))
+  Downloading accelerate-0.28.0-py3-none-any.whl.metadata (18 kB)
+Collecting datasets==2.18.0 (from -r requirements-a40.txt (line 4))
+  Downloading datasets-2.18.0-py3-none-any.whl.metadata (20 kB)
+Collecting huggingface-hub==0.25.2 (from -r requirements-a40.txt (line 5))
+  Downloading huggingface_hub-0.25.2-py3-none-any.whl.metadata (13 kB)
+Collecting numpy==1.26.4 (from -r requirements-a40.txt (line 6))
+  Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting pyarrow==15.0.2 (from -r requirements-a40.txt (line 7))
+  Downloading pyarrow-15.0.2-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting fire==0.6.0 (from -r requirements-a40.txt (line 8))
+  Downloading fire-0.6.0.tar.gz (88 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting sentencepiece==0.2.0 (from -r requirements-a40.txt (line 9))
+  Downloading sentencepiece-0.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting protobuf==4.25.3 (from -r requirements-a40.txt (line 10))
+  Downloading protobuf-4.25.3-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting bitsandbytes==0.43.0 (from -r requirements-a40.txt (line 11))
+  Downloading bitsandbytes-0.43.0-py3-none-manylinux_2_24_x86_64.whl.metadata (1.8 kB)
+Requirement already satisfied: filelock in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from transformers==4.38.0->-r requirements-a40.txt (line 2)) (3.32.3)
+Requirement already satisfied: packaging>=20.0 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from transformers==4.38.0->-r requirements-a40.txt (line 2)) (26.3)
+Collecting pyyaml>=5.1 (from transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting regex!=2019.12.17 (from transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Downloading regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting requests (from transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting tokenizers<0.19,>=0.14 (from transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Downloading tokenizers-0.15.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting safetensors>=0.4.1 (from transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Using cached safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting tqdm>=4.27 (from transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Using cached tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: fsspec>=2023.5.0 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from huggingface-hub==0.25.2->-r requirements-a40.txt (line 5)) (2026.7.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from huggingface-hub==0.25.2->-r requirements-a40.txt (line 5)) (4.16.0)
+Collecting psutil (from accelerate==0.28.0->-r requirements-a40.txt (line 3))
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Requirement already satisfied: torch>=1.10.0 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from accelerate==0.28.0->-r requirements-a40.txt (line 3)) (2.2.2+cu121)
+Collecting pyarrow-hotfix (from datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading pyarrow_hotfix-0.7-py3-none-any.whl.metadata (3.6 kB)
+Collecting dill<0.3.9,>=0.3.0 (from datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+Collecting pandas (from datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+Collecting xxhash (from datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading xxhash-4.0.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (17 kB)
+Collecting multiprocess (from datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading multiprocess-0.70.19-py310-none-any.whl.metadata (7.5 kB)
+Collecting fsspec>=2023.5.0 (from huggingface-hub==0.25.2->-r requirements-a40.txt (line 5))
+  Downloading fsspec-2024.2.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting aiohttp (from datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading aiohttp-3.14.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting six (from fire==0.6.0->-r requirements-a40.txt (line 8))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting termcolor (from fire==0.6.0->-r requirements-a40.txt (line 8))
+  Downloading termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Using cached aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting async-timeout<6.0,>=4.0 (from aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading async_timeout-5.0.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting attrs>=17.3.0 (from aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting multidict<8.0,>=4.5 (from aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading multidict-7.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.2 kB)
+Collecting propcache>=0.2.0 (from aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading propcache-0.5.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Collecting yarl<2.0,>=1.25.1 (from aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading yarl-1.25.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+Collecting idna>=2.0 (from yarl<2.0,>=1.25.1->aiohttp->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting charset_normalizer<4,>=2 (from requests->transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Downloading charset_normalizer-3.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting urllib3<3,>=1.26 (from requests->transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests->transformers==4.38.0->-r requirements-a40.txt (line 2))
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: sympy in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (1.14.0)
+Requirement already satisfied: networkx in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (3.4.2)
+Requirement already satisfied: jinja2 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (3.1.6)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (8.9.2.26)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.19.3 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (2.19.3)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (12.1.105)
+Requirement already satisfied: triton==2.2.0 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (2.2.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (12.9.86)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from jinja2->torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (3.0.3)
+INFO: pip is looking at multiple versions of multiprocess to determine which version is compatible with other requirements. This could take a while.
+Collecting multiprocess (from datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading multiprocess-0.70.18-py310-none-any.whl.metadata (7.5 kB)
+  Downloading multiprocess-0.70.17-py310-none-any.whl.metadata (7.2 kB)
+  Downloading multiprocess-0.70.16-py310-none-any.whl.metadata (7.2 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting pytz>=2020.1 (from pandas->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Using cached pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas->datasets==2.18.0->-r requirements-a40.txt (line 4))
+  Using cached tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages (from sympy->torch>=1.10.0->accelerate==0.28.0->-r requirements-a40.txt (line 3)) (1.3.0)
+Downloading transformers-4.38.0-py3-none-any.whl (8.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.5/8.5 MB 44.4 MB/s  0:00:00
+Downloading huggingface_hub-0.25.2-py3-none-any.whl (436 kB)
+Downloading accelerate-0.28.0-py3-none-any.whl (290 kB)
+Downloading datasets-2.18.0-py3-none-any.whl (510 kB)
+Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 9.4 MB/s  0:00:01
+Downloading pyarrow-15.0.2-cp310-cp310-manylinux_2_28_x86_64.whl (38.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.3/38.3 MB 9.4 MB/s  0:00:04
+Downloading sentencepiece-0.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 10.5 MB/s  0:00:00
+Downloading protobuf-4.25.3-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+Downloading bitsandbytes-0.43.0-py3-none-manylinux_2_24_x86_64.whl (102.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 102.2/102.2 MB 9.1 MB/s  0:00:11
+Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+Downloading fsspec-2024.2.0-py3-none-any.whl (170 kB)
+Downloading tokenizers-0.15.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 18.7 MB/s  0:00:00
+Downloading aiohttp-3.14.5-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 11.8 MB/s  0:00:00
+Downloading async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+Downloading multidict-7.1.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (464 kB)
+Downloading yarl-1.25.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (118 kB)
+Using cached aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading frozenlist-1.8.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (219 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Downloading propcache-0.5.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
+Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 13.7 MB/s  0:00:00
+Downloading regex-2026.9.29-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (797 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 17.9 MB/s  0:00:00
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (271 kB)
+Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Using cached safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+Using cached tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading multiprocess-0.70.16-py310-none-any.whl (134 kB)
+Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 10.4 MB/s  0:00:01
+Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+Using cached pytz-2026.5-py2.py3-none-any.whl (506 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Downloading pyarrow_hotfix-0.7-py3-none-any.whl (7.9 kB)
+Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+Downloading xxhash-4.0.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (249 kB)
+Building wheels for collected packages: fire
+  Building wheel for fire (pyproject.toml): started
+  Building wheel for fire (pyproject.toml): finished with status 'done'
+  Created wheel for fire: filename=fire-0.6.0-py2.py3-none-any.whl size=117114 sha256=7869f7fe2c1fb8f1faad3b5fce4b8631d22df3c69f7d5ad010d378c39461aff8
+  Stored in directory: /home/msai/changyan003/.cache/pip/wheels/d6/6d/5d/5b73fa0f46d01a793713f8859201361e9e581ced8c75e5c6a3
+Successfully built fire
+Installing collected packages: sentencepiece, pytz, xxhash, urllib3, tzdata, tqdm, termcolor, six, safetensors, regex, pyyaml, pyarrow-hotfix, psutil, protobuf, propcache, numpy, multidict, idna, fsspec, frozenlist, dill, charset_normalizer, certifi, attrs, async-timeout, aiohappyeyeballs, yarl, requests, python-dateutil, pyarrow, multiprocess, fire, aiosignal, pandas, huggingface-hub, aiohttp, tokenizers, bitsandbytes, accelerate, transformers, datasets
+  Attempting uninstall: fsspec
+    Found existing installation: fsspec 2026.7.0
+    Uninstalling fsspec-2026.7.0:
+      Successfully uninstalled fsspec-2026.7.0
+
+Successfully installed accelerate-0.28.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 async-timeout-5.0.1 attrs-26.1.0 bitsandbytes-0.43.0 certifi-2026.10.23 charset_normalizer-3.5.2 datasets-2.18.0 dill-0.3.8 fire-0.6.0 frozenlist-1.8.0 fsspec-2024.2.0 huggingface-hub-0.25.2 idna-3.20 multidict-7.1.0 multiprocess-0.70.16 numpy-1.26.4 pandas-2.3.3 propcache-0.5.4 protobuf-4.25.3 psutil-7.2.2 pyarrow-15.0.2 pyarrow-hotfix-0.7 python-dateutil-3.0.0 pytz-2026.5 pyyaml-6.0.3 regex-2026.9.29 requests-2.34.2 safetensors-0.8.0 sentencepiece-0.2.0 six-1.17.0 termcolor-3.3.0 tokenizers-0.15.2 tqdm-4.70.1 transformers-4.38.0 tzdata-2026.5 urllib3-2.8.0 xxhash-4.0.2 yarl-1.25.1
+Obtaining file:///home/msai/changyan003/ai6130-ass2/source-v1/peft
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: peft
+  Building editable for peft (pyproject.toml): started
+  Building editable for peft (pyproject.toml): finished with status 'done'
+  Created wheel for peft: filename=peft-0.3.0.dev0-0.editable-py3-none-any.whl size=5994 sha256=20ea86099ac350ed6a20b077eb1da4bfa898ba5b2b75709136d48fa1ff5a1e28
+  Stored in directory: /tmp/pip-ephem-wheel-cache-rk75cvn3/wheels/cd/1b/45/61c665f780335c8497e3da328d3a080466b1a47a337bbf2e14
+Successfully built peft
+Installing collected packages: peft
+Successfully installed peft-0.3.0.dev0
+{
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "cuda_runtime": "12.1",
+  "gpu": "NVIDIA L40S",
+  "peft_path": "/home/msai/changyan003/ai6130-ass2/source-v1/peft/src/peft/__init__.py",
+  "packages": {
+    "transformers": "4.38.0",
+    "accelerate": "0.28.0",
+    "datasets": "2.18.0",
+    "numpy": "1.26.4",
+    "huggingface-hub": "0.25.2"
+  },
+  "nvidia_smi": "Sun Oct 25 20:18:58 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 570.148.08             Driver Version: 570.148.08     CUDA Version: 12.8     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:49:00.0 Off |                    0 |\n| N/A   32C    P8             32W /  350W |       3MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n"
+}

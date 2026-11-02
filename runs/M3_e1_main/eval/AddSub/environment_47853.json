@@ -1,0 +1,15 @@
+{
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "cuda_runtime": "12.1",
+  "gpu": "NVIDIA A40",
+  "peft_path": "/home/msai/changyan003/ai6130-ass2/source-v1/peft/src/peft/__init__.py",
+  "packages": {
+    "transformers": "4.38.0",
+    "accelerate": "0.28.0",
+    "datasets": "2.18.0",
+    "numpy": "1.26.4",
+    "huggingface-hub": "0.25.2"
+  },
+  "nvidia_smi": "Tue Oct 27 22:25:56 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 570.148.08             Driver Version: 570.148.08     CUDA Version: 12.8     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA A40                     On  |   00000000:48:00.0 Off |                    0 |\n|  0%   30C    P8             27W /  300W |       3MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n"
+}

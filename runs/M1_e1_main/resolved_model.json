@@ -1,0 +1,24 @@
+{
+  "revision": "bce5d60d3b0c68318862270ec4e794d83308d80a",
+  "adapter_config": {
+    "peft_type": "LORA",
+    "base_model_name_or_path": "openlm-research/open_llama_3b_v2",
+    "task_type": "CAUSAL_LM",
+    "inference_mode": false,
+    "r": 8,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "merge_weights": false,
+    "fan_in_fan_out": false,
+    "enable_lora": null,
+    "bias": "none",
+    "modules_to_save": null
+  },
+  "trainable_parameters": 2662400,
+  "train_records": 6731,
+  "validation_records": 120
+}

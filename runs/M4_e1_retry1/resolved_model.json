@@ -1,0 +1,24 @@
+{
+  "revision": "ff3c701f2424c7625fdefb9dd470f45ef18b02d6",
+  "adapter_config": {
+    "peft_type": "BOTTLENECK",
+    "base_model_name_or_path": "TinyLlama/TinyLlama_v1.1",
+    "task_type": "CAUSAL_LM",
+    "inference_mode": false,
+    "bottleneck_size": 256,
+    "non_linearity": "tanh",
+    "adapter_dropout": 0.0,
+    "target_modules": [
+      "down_proj"
+    ],
+    "use_parallel_adapter": false,
+    "use_adapterp": true,
+    "scaling": 1.0,
+    "bias": "none",
+    "init_weights": "bert",
+    "modules_to_save": null
+  },
+  "trainable_parameters": 23068672,
+  "train_records": 6731,
+  "validation_records": 120
+}

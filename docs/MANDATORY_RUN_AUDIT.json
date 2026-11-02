@@ -1,0 +1,342 @@
+[
+  {
+    "run": "M1_e1_retry2",
+    "checks": {
+      "training_complete": true,
+      "split_complete_disjoint": true,
+      "training_data_hash": true,
+      "train_revision": true,
+      "checkpoint-1400_manifest": true,
+      "checkpoint-1600_manifest": true,
+      "checkpoint-1500_manifest": true,
+      "best_checkpoint_present": true,
+      "AQuA_coverage": true,
+      "AQuA_test_identity": true,
+      "AQuA_scoring": true,
+      "AQuA_adapter_hashes": true,
+      "AQuA_settings": true,
+      "AddSub_coverage": true,
+      "AddSub_test_identity": true,
+      "AddSub_scoring": true,
+      "AddSub_adapter_hashes": true,
+      "AddSub_settings": true,
+      "final_adapter_matches_best_checkpoint": true
+    },
+    "all_integrity_checks_pass": true,
+    "manifest_files_checked": 33,
+    "split_sha256": "90338055ef76f8308bb4b3e72fffc88c7835a50df41a4442d7e99dc6e64ac7ef",
+    "source_mismatches": [
+      "finetune.py"
+    ],
+    "nonfinite_grad_logs": 1,
+    "zero_grad_logs": 0,
+    "grad_logs": 168,
+    "first_validation_loss": 0.8352071046829224,
+    "last_validation_loss": 0.7187728881835938,
+    "best_validation_loss": 0.7187728881835938,
+    "best_checkpoint": "checkpoint-1600",
+    "training_seconds": 543.0227908818051,
+    "peak_gpu_gib": 10.162392616271973,
+    "trainable_parameters": 2662400,
+    "training_gpu": "NVIDIA A40",
+    "evaluations": [
+      {
+        "dataset": "AQuA",
+        "complete": true,
+        "correct": 23,
+        "completed": 254,
+        "total": 254,
+        "accuracy_percent": 9.05511811023622,
+        "parse_failures": 148,
+        "generation_seconds": 6105.152668607421,
+        "subset": false,
+        "empty_outputs": 0
+      },
+      {
+        "dataset": "AddSub",
+        "complete": true,
+        "correct": 153,
+        "completed": 395,
+        "total": 395,
+        "accuracy_percent": 38.734177215189874,
+        "parse_failures": 1,
+        "generation_seconds": 4245.840632278472,
+        "subset": false,
+        "empty_outputs": 0
+      }
+    ],
+    "tensors": {
+      "count": 104,
+      "nonfinite": 0,
+      "zero": 0,
+      "changed_final_vs_last_epoch": 104
+    },
+    "checkpoint_diagnostics": [
+      {
+        "checkpoint": "checkpoint-1400",
+        "scheduler_last_epoch": 1399,
+        "fp16_scale": 32768.0
+      },
+      {
+        "checkpoint": "checkpoint-1600",
+        "scheduler_last_epoch": 1599,
+        "fp16_scale": 32768.0
+      }
+    ]
+  },
+  {
+    "run": "M2_e1_main",
+    "checks": {
+      "training_complete": true,
+      "split_complete_disjoint": true,
+      "training_data_hash": true,
+      "train_revision": true,
+      "checkpoint-1400_manifest": true,
+      "checkpoint-1600_manifest": true,
+      "checkpoint-1500_manifest": true,
+      "best_checkpoint_present": true,
+      "AQuA_coverage": true,
+      "AQuA_test_identity": true,
+      "AQuA_scoring": true,
+      "AQuA_adapter_hashes": true,
+      "AQuA_settings": true,
+      "AddSub_coverage": true,
+      "AddSub_test_identity": true,
+      "AddSub_scoring": true,
+      "AddSub_adapter_hashes": true,
+      "AddSub_settings": true,
+      "final_adapter_matches_best_checkpoint": true
+    },
+    "all_integrity_checks_pass": true,
+    "manifest_files_checked": 33,
+    "split_sha256": "90338055ef76f8308bb4b3e72fffc88c7835a50df41a4442d7e99dc6e64ac7ef",
+    "source_mismatches": [
+      "finetune.py"
+    ],
+    "nonfinite_grad_logs": 0,
+    "zero_grad_logs": 0,
+    "grad_logs": 168,
+    "first_validation_loss": 0.8589799404144287,
+    "last_validation_loss": 0.6944618821144104,
+    "best_validation_loss": 0.6944618821144104,
+    "best_checkpoint": "checkpoint-1600",
+    "training_seconds": 576.6019677780569,
+    "peak_gpu_gib": 10.29509449005127,
+    "trainable_parameters": 42598400,
+    "training_gpu": "NVIDIA A40",
+    "evaluations": [
+      {
+        "dataset": "AQuA",
+        "complete": true,
+        "correct": 6,
+        "completed": 254,
+        "total": 254,
+        "accuracy_percent": 2.3622047244094486,
+        "parse_failures": 219,
+        "generation_seconds": 3083.5208713468164,
+        "subset": false,
+        "empty_outputs": 0
+      },
+      {
+        "dataset": "AddSub",
+        "complete": true,
+        "correct": 154,
+        "completed": 395,
+        "total": 395,
+        "accuracy_percent": 38.9873417721519,
+        "parse_failures": 0,
+        "generation_seconds": 3696.138606249355,
+        "subset": false,
+        "empty_outputs": 0
+      }
+    ],
+    "tensors": {
+      "count": 52,
+      "nonfinite": 0,
+      "zero": 0,
+      "changed_final_vs_last_epoch": 52
+    },
+    "checkpoint_diagnostics": [
+      {
+        "checkpoint": "checkpoint-1400",
+        "scheduler_last_epoch": 1400,
+        "fp16_scale": 65536.0
+      },
+      {
+        "checkpoint": "checkpoint-1600",
+        "scheduler_last_epoch": 1600,
+        "fp16_scale": 65536.0
+      }
+    ]
+  },
+  {
+    "run": "M3_e1_main",
+    "checks": {
+      "training_complete": true,
+      "split_complete_disjoint": true,
+      "training_data_hash": true,
+      "train_revision": true,
+      "checkpoint-100_manifest": true,
+      "checkpoint-1600_manifest": true,
+      "checkpoint-1500_manifest": true,
+      "best_checkpoint_present": true,
+      "AQuA_coverage": true,
+      "AQuA_test_identity": true,
+      "AQuA_scoring": true,
+      "AQuA_adapter_hashes": true,
+      "AQuA_settings": true,
+      "AddSub_coverage": true,
+      "AddSub_test_identity": true,
+      "AddSub_scoring": true,
+      "AddSub_adapter_hashes": true,
+      "AddSub_settings": true,
+      "final_adapter_matches_best_checkpoint": true
+    },
+    "all_integrity_checks_pass": true,
+    "manifest_files_checked": 33,
+    "split_sha256": "90338055ef76f8308bb4b3e72fffc88c7835a50df41a4442d7e99dc6e64ac7ef",
+    "source_mismatches": [
+      "finetune.py"
+    ],
+    "nonfinite_grad_logs": 2,
+    "zero_grad_logs": 161,
+    "grad_logs": 168,
+    "first_validation_loss": 1.7817344665527344,
+    "last_validation_loss": 1.7826237678527832,
+    "best_validation_loss": 1.7817344665527344,
+    "best_checkpoint": "checkpoint-100",
+    "training_seconds": 268.05531048960984,
+    "peak_gpu_gib": 4.2094902992248535,
+    "trainable_parameters": 1126400,
+    "training_gpu": "NVIDIA A40",
+    "evaluations": [
+      {
+        "dataset": "AQuA",
+        "complete": true,
+        "correct": 1,
+        "completed": 254,
+        "total": 254,
+        "accuracy_percent": 0.3937007874015748,
+        "parse_failures": 253,
+        "generation_seconds": 3029.7493315581232,
+        "subset": false,
+        "empty_outputs": 15
+      },
+      {
+        "dataset": "AddSub",
+        "complete": true,
+        "correct": 11,
+        "completed": 395,
+        "total": 395,
+        "accuracy_percent": 2.7848101265822787,
+        "parse_failures": 37,
+        "generation_seconds": 4231.987787850201,
+        "subset": false,
+        "empty_outputs": 37
+      }
+    ],
+    "tensors": {
+      "count": 88,
+      "nonfinite": 0,
+      "zero": 22,
+      "changed_final_vs_last_epoch": 22
+    },
+    "checkpoint_diagnostics": [
+      {
+        "checkpoint": "checkpoint-100",
+        "scheduler_last_epoch": 70,
+        "fp16_scale": 6.103515625e-05
+      },
+      {
+        "checkpoint": "checkpoint-1600",
+        "scheduler_last_epoch": 1570,
+        "fp16_scale": 6.103515625e-05
+      }
+    ]
+  },
+  {
+    "run": "M4_e1_retry1",
+    "checks": {
+      "training_complete": true,
+      "split_complete_disjoint": true,
+      "training_data_hash": true,
+      "train_revision": true,
+      "checkpoint-100_manifest": true,
+      "checkpoint-1600_manifest": true,
+      "checkpoint-1500_manifest": true,
+      "best_checkpoint_present": true,
+      "AQuA_coverage": true,
+      "AQuA_test_identity": true,
+      "AQuA_scoring": true,
+      "AQuA_adapter_hashes": true,
+      "AQuA_settings": true,
+      "AddSub_coverage": true,
+      "AddSub_test_identity": true,
+      "AddSub_scoring": true,
+      "AddSub_adapter_hashes": true,
+      "AddSub_settings": true,
+      "final_adapter_matches_best_checkpoint": true
+    },
+    "all_integrity_checks_pass": true,
+    "manifest_files_checked": 33,
+    "split_sha256": "90338055ef76f8308bb4b3e72fffc88c7835a50df41a4442d7e99dc6e64ac7ef",
+    "source_mismatches": [
+      "finetune.py"
+    ],
+    "nonfinite_grad_logs": 2,
+    "zero_grad_logs": 128,
+    "grad_logs": 168,
+    "first_validation_loss": 1.8835057020187378,
+    "last_validation_loss": 2.0768208503723145,
+    "best_validation_loss": 1.8835057020187378,
+    "best_checkpoint": "checkpoint-100",
+    "training_seconds": 151.24444419518113,
+    "peak_gpu_gib": 4.282263278961182,
+    "trainable_parameters": 23068672,
+    "training_gpu": "NVIDIA L40S",
+    "evaluations": [
+      {
+        "dataset": "AQuA",
+        "complete": true,
+        "correct": 0,
+        "completed": 254,
+        "total": 254,
+        "accuracy_percent": 0.0,
+        "parse_failures": 254,
+        "generation_seconds": 1541.0136517388746,
+        "subset": false,
+        "empty_outputs": 11
+      },
+      {
+        "dataset": "AddSub",
+        "complete": true,
+        "correct": 10,
+        "completed": 395,
+        "total": 395,
+        "accuracy_percent": 2.5316455696202533,
+        "parse_failures": 2,
+        "generation_seconds": 4235.059813433327,
+        "subset": false,
+        "empty_outputs": 1
+      }
+    ],
+    "tensors": {
+      "count": 44,
+      "nonfinite": 0,
+      "zero": 0,
+      "changed_final_vs_last_epoch": 35
+    },
+    "checkpoint_diagnostics": [
+      {
+        "checkpoint": "checkpoint-100",
+        "scheduler_last_epoch": 71,
+        "fp16_scale": 0.0001220703125
+      },
+      {
+        "checkpoint": "checkpoint-1600",
+        "scheduler_last_epoch": 1571,
+        "fp16_scale": 0.0001220703125
+      }
+    ]
+  }
+]

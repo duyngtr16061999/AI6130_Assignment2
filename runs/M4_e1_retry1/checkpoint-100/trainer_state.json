@@ -1,0 +1,99 @@
+{
+  "best_metric": 1.8835057020187378,
+  "best_model_checkpoint": "/home/msai/changyan003/ai6130-ass2/runs/M4_e1_retry1/checkpoint-100",
+  "epoch": 0.059417706476530004,
+  "eval_steps": 100,
+  "global_step": 100,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.01,
+      "grad_norm": NaN,
+      "learning_rate": 0.0,
+      "loss": 1.8643,
+      "step": 10
+    },
+    {
+      "epoch": 0.01,
+      "grad_norm": NaN,
+      "learning_rate": 0.0,
+      "loss": 1.8898,
+      "step": 20
+    },
+    {
+      "epoch": 0.02,
+      "grad_norm": 0.008976941928267479,
+      "learning_rate": 2.9999999999999997e-06,
+      "loss": 1.897,
+      "step": 30
+    },
+    {
+      "epoch": 0.02,
+      "grad_norm": 0.00986279733479023,
+      "learning_rate": 3.2999999999999996e-05,
+      "loss": 1.8763,
+      "step": 40
+    },
+    {
+      "epoch": 0.03,
+      "grad_norm": 0.026131032034754753,
+      "learning_rate": 6.299999999999999e-05,
+      "loss": 1.899,
+      "step": 50
+    },
+    {
+      "epoch": 0.04,
+      "grad_norm": 0.011606312356889248,
+      "learning_rate": 9.3e-05,
+      "loss": 1.8963,
+      "step": 60
+    },
+    {
+      "epoch": 0.04,
+      "grad_norm": 0.013460985384881496,
+      "learning_rate": 0.00012299999999999998,
+      "loss": 1.8706,
+      "step": 70
+    },
+    {
+      "epoch": 0.05,
+      "grad_norm": 0.013549255207180977,
+      "learning_rate": 0.00015299999999999998,
+      "loss": 1.8604,
+      "step": 80
+    },
+    {
+      "epoch": 0.05,
+      "grad_norm": 0.012506102211773396,
+      "learning_rate": 0.00018299999999999998,
+      "loss": 1.8775,
+      "step": 90
+    },
+    {
+      "epoch": 0.06,
+      "grad_norm": 0.012973954901099205,
+      "learning_rate": 0.00021299999999999997,
+      "loss": 1.8986,
+      "step": 100
+    },
+    {
+      "epoch": 0.06,
+      "eval_loss": 1.8835057020187378,
+      "eval_runtime": 0.5882,
+      "eval_samples_per_second": 204.011,
+      "eval_steps_per_second": 25.501,
+      "step": 100
+    }
+  ],
+  "logging_steps": 10,
+  "max_steps": 1683,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 1,
+  "save_steps": 100,
+  "total_flos": 649574745243648.0,
+  "train_batch_size": 4,
+  "trial_name": null,
+  "trial_params": null
+}

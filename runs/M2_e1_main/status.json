@@ -1,0 +1,8 @@
+{
+  "state": "complete",
+  "elapsed_seconds": 576.6019677780569,
+  "step": 1683,
+  "best_checkpoint": "/home/msai/changyan003/ai6130-ass2/runs/M2_e1_main/checkpoint-1600",
+  "final_adapter": "/home/msai/changyan003/ai6130-ass2/runs/M2_e1_main/final_adapter",
+  "peak_gpu_bytes": 11054273536
+}

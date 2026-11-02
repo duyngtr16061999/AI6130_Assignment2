@@ -1,0 +1,68 @@
++ project=/home/msai/changyan003/ai6130-ass2
++ source_dir=/home/msai/changyan003/ai6130-ass2/source-v1
++ source /home/msai/changyan003/ai6130-ass2/source-v1/scripts/tc2/assert_compute.sh
+++ [[ -z 46916 ]]
+++ [[ -z TC2N02 ]]
++++ hostname -s
+++ actual_host=TC2N02
+++ allocated_here=false
+++ IFS=
+++ read -r allocated_host
++++ scontrol show hostnames TC2N02
+++ [[ TC2N02 == \T\C\2\N\0\2 ]]
+++ allocated_here=true
+++ IFS=
+++ read -r allocated_host
+++ [[ true != true ]]
+++ [[ TC2N02 == CCDS-TC2 ]]
+++ printf 'COMPUTE CHECK PASSED: job=%s hostname=%s allocated_nodes=%s\n' 46916 TC2N02 TC2N02
++ cd /home/msai/changyan003/ai6130-ass2/source-v1
++ export PYTHONUNBUFFERED=1
++ PYTHONUNBUFFERED=1
++ export WANDB_MODE=disabled
++ WANDB_MODE=disabled
++ export HF_HOME=/home/msai/changyan003/ai6130-ass2/cache/huggingface
++ HF_HOME=/home/msai/changyan003/ai6130-ass2/cache/huggingface
++ export TOKENIZERS_PARALLELISM=false
++ TOKENIZERS_PARALLELISM=false
++ export OMP_NUM_THREADS=4
++ OMP_NUM_THREADS=4
++ action=setup
++ run=M1
++ epochs=1
++ tag=main
++ dataset=AQuA
++ [[ M1 =~ ^M[1-4]$ ]]
++ [[ 1 =~ ^[1-9][0-9]*$ ]]
++ [[ main =~ ^[A-Za-z0-9_-]+$ ]]
++ [[ AQuA == AQuA ]]
++ mkdir -p /home/msai/changyan003/ai6130-ass2/cache /home/msai/changyan003/ai6130-ass2/runs /home/msai/changyan003/ai6130-ass2/summary /home/msai/changyan003/ai6130-ass2/exports
++ module load anaconda
++ _module_raw load anaconda
++ set +u
+++ conda info --base
++ source /apps/anaconda3-2025.06-0/etc/profile.d/conda.sh
+++ export CONDA_EXE=/apps/anaconda3-2025.06-0/bin/conda
+++ CONDA_EXE=/apps/anaconda3-2025.06-0/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/apps/anaconda3-2025.06-0/bin/python
+++ CONDA_PYTHON_EXE=/apps/anaconda3-2025.06-0/bin/python
+++ '[' -z '' ']'
+++ export CONDA_SHLVL=0
+++ CONDA_SHLVL=0
+++ '[' -n '' ']'
+++++ dirname /apps/anaconda3-2025.06-0/bin/conda
++++ dirname /apps/anaconda3-2025.06-0/bin
+++ PATH=/apps/anaconda3-2025.06-0/condabin:/apps/anaconda3-2025.06-0/bin:/cm/local/apps/slurm/current/scripts:/cm/local/apps/slurm/current/sbin:/cm/local/apps/slurm/current/bin:/cm/local/apps/gcc/14.2.0/bin:/home/msai/changyan003/.local/bin:/home/msai/changyan003/bin:/cm/local/apps/environment-modules/4.5.3//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.5.3/bin
+++ export PATH
+++ '[' -z '' ']'
+++ PS1=
++ set -u
++ [[ setup == setup ]]
++ [[ ! -e /home/msai/changyan003/ai6130-ass2/env ]]
++ echo 'Environment exists; do not mutate it while runs use it.'
+Environment exists; do not mutate it while runs use it.
++ exit 2

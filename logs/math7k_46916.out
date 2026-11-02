@@ -1,0 +1,62 @@
+COMPUTE CHECK PASSED: job=46916 hostname=TC2N02 allocated_nodes=TC2N02
++ unset _mlshdbg
++ '[' 0 = 1 ']'
++ unset _mlre _mlIFS
++ '[' -n x ']'
++ _mlIFS=' 	
+'
++ IFS=' '
++ '[' -n '' ']'
+++ /usr/bin/tclsh /cm/local/apps/environment-modules/4.5.3/libexec/modulecmd.tcl bash load anaconda
++ eval 'CPATH=/apps/anaconda3-2025.06-0/include:/cm/local/apps/slurm/current/include;' export 'CPATH;
+LD_LIBRARY_PATH=/apps/anaconda3-2025.06-0/lib:/cm/local/apps/slurm/current/lib64/slurm:/cm/local/apps/slurm/current/lib64:/cm/local/apps/mpc/1.3.1/lib:/cm/local/apps/mpc/1.3.1/lib64:/cm/local/apps/mpc/1.3.1/lib32:/cm/local/apps/mpfr/4.2.1/lib:/cm/local/apps/mpfr/4.2.1/lib64:/cm/local/apps/mpfr/4.2.1/lib32:/cm/local/apps/gmp/6.3.0/lib:/cm/local/apps/gmp/6.3.0/lib64:/cm/local/apps/gmp/6.3.0/lib32:/cm/local/apps/gcc/14.2.0/lib:/cm/local/apps/gcc/14.2.0/lib64:/cm/local/apps/gcc/14.2.0/lib32;' export 'LD_LIBRARY_PATH;
+LIBRARY_PATH=/apps/anaconda3-2025.06-0/lib:/cm/local/apps/slurm/current/lib64/slurm:/cm/local/apps/slurm/current/lib64;' export 'LIBRARY_PATH;
+MANPATH=/apps/anaconda3-2025.06-0/share/man:/cm/local/apps/slurm/current/man:/cm/local/apps/environment-modules/4.5.3//share/man:/usr/local/share/man:/usr/share/man:/cm/local/apps/environment-modules/current/share/man;' export 'MANPATH;
+_LMFILES_=/cm/local/modulefiles/gmp/6.3.0:/cm/local/modulefiles/mpfr/4.2.1:/cm/local/modulefiles/mpc/1.3.1:/cm/local/modulefiles/gcc/14.2.0:/cm/local/modulefiles/slurm/slurm/24.11:/cm/shared/modulefiles/anaconda/25.5.1;' export '_LMFILES_;
+LOADEDMODULES=gmp/6.3.0:mpfr/4.2.1:mpc/1.3.1:gcc/14.2.0:slurm/slurm/24.11:anaconda/25.5.1;' export 'LOADEDMODULES;
+LIBRARY_PATH_modshare=/cm/local/apps/slurm/current/lib64:1:/cm/local/apps/slurm/current/lib64/slurm:1:/apps/anaconda3-2025.06-0/lib:1;' export 'LIBRARY_PATH_modshare;
+MANPATH_modshare=/usr/local/share/man:1:/cm/local/apps/environment-modules/4.5.3//share/man:1:/cm/local/apps/environment-modules/current/share/man:1:/apps/anaconda3-2025.06-0/share/man:1:/usr/share/man:1:/cm/local/apps/slurm/current/man:1;' export 'MANPATH_modshare;
+CPATH_modshare=/apps/anaconda3-2025.06-0/include:1:/cm/local/apps/slurm/current/include:1;' export 'CPATH_modshare;
+LD_LIBRARY_PATH_modshare=/cm/local/apps/mpc/1.3.1/lib:1:/cm/local/apps/gmp/6.3.0/lib:1:/cm/local/apps/gcc/14.2.0/lib64:1:/cm/local/apps/slurm/current/lib64/slurm:1:/cm/local/apps/mpfr/4.2.1/lib64:1:/cm/local/apps/gcc/14.2.0/lib32:1:/cm/local/apps/mpfr/4.2.1/lib32:1:/cm/local/apps/slurm/current/lib64:1:/cm/local/apps/mpfr/4.2.1/lib:1:/cm/local/apps/gcc/14.2.0/lib:1:/cm/local/apps/mpc/1.3.1/lib64:1:/cm/local/apps/gmp/6.3.0/lib64:1:/cm/local/apps/gmp/6.3.0/lib32:1:/cm/local/apps/mpc/1.3.1/lib32:1:/apps/anaconda3-2025.06-0/lib:1;' export 'LD_LIBRARY_PATH_modshare;
+_LMFILES__modshare=/cm/local/modulefiles/gmp/6.3.0:1:/cm/local/modulefiles/mpc/1.3.1:1:/cm/shared/modulefiles/anaconda/25.5.1:1:/cm/local/modulefiles/slurm/slurm/24.11:1:/cm/local/modulefiles/mpfr/4.2.1:1:/cm/local/modulefiles/gcc/14.2.0:1;' export '_LMFILES__modshare;
+LOADEDMODULES_modshare=gmp/6.3.0:1:mpc/1.3.1:1:anaconda/25.5.1:1:slurm/slurm/24.11:1:mpfr/4.2.1:1:gcc/14.2.0:1;' export 'LOADEDMODULES_modshare;
+PATH=/apps/anaconda3-2025.06-0/bin:/cm/local/apps/slurm/current/scripts:/cm/local/apps/slurm/current/sbin:/cm/local/apps/slurm/current/bin:/cm/local/apps/gcc/14.2.0/bin:/home/msai/changyan003/.local/bin:/home/msai/changyan003/bin:/cm/local/apps/environment-modules/4.5.3//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.5.3/bin;' export 'PATH;
+PATH_modshare=/cm/local/apps/slurm/current/bin:1:/apps/anaconda3-2025.06-0/bin:1:/usr/bin:1:/cm/local/apps/slurm/current/sbin:1:/usr/local/bin:1:/home/msai/changyan003/.local/bin:1:/cm/local/apps/environment-modules/4.5.3//bin:1:/cm/local/apps/slurm/current/scripts:1:/cm/local/apps/gcc/14.2.0/bin:1:/sbin:1:/home/msai/changyan003/bin:1:/usr/sbin:1:/cm/local/apps/environment-modules/4.5.3/bin:1:/usr/local/sbin:1;' export 'PATH_modshare;
+test' '0;'
+++ CPATH=/apps/anaconda3-2025.06-0/include:/cm/local/apps/slurm/current/include
+++ export CPATH
+++ LD_LIBRARY_PATH=/apps/anaconda3-2025.06-0/lib:/cm/local/apps/slurm/current/lib64/slurm:/cm/local/apps/slurm/current/lib64:/cm/local/apps/mpc/1.3.1/lib:/cm/local/apps/mpc/1.3.1/lib64:/cm/local/apps/mpc/1.3.1/lib32:/cm/local/apps/mpfr/4.2.1/lib:/cm/local/apps/mpfr/4.2.1/lib64:/cm/local/apps/mpfr/4.2.1/lib32:/cm/local/apps/gmp/6.3.0/lib:/cm/local/apps/gmp/6.3.0/lib64:/cm/local/apps/gmp/6.3.0/lib32:/cm/local/apps/gcc/14.2.0/lib:/cm/local/apps/gcc/14.2.0/lib64:/cm/local/apps/gcc/14.2.0/lib32
+++ export LD_LIBRARY_PATH
+++ LIBRARY_PATH=/apps/anaconda3-2025.06-0/lib:/cm/local/apps/slurm/current/lib64/slurm:/cm/local/apps/slurm/current/lib64
+++ export LIBRARY_PATH
+++ MANPATH=/apps/anaconda3-2025.06-0/share/man:/cm/local/apps/slurm/current/man:/cm/local/apps/environment-modules/4.5.3//share/man:/usr/local/share/man:/usr/share/man:/cm/local/apps/environment-modules/current/share/man
+++ export MANPATH
+++ _LMFILES_=/cm/local/modulefiles/gmp/6.3.0:/cm/local/modulefiles/mpfr/4.2.1:/cm/local/modulefiles/mpc/1.3.1:/cm/local/modulefiles/gcc/14.2.0:/cm/local/modulefiles/slurm/slurm/24.11:/cm/shared/modulefiles/anaconda/25.5.1
+++ export _LMFILES_
+++ LOADEDMODULES=gmp/6.3.0:mpfr/4.2.1:mpc/1.3.1:gcc/14.2.0:slurm/slurm/24.11:anaconda/25.5.1
+++ export LOADEDMODULES
+++ LIBRARY_PATH_modshare=/cm/local/apps/slurm/current/lib64:1:/cm/local/apps/slurm/current/lib64/slurm:1:/apps/anaconda3-2025.06-0/lib:1
+++ export LIBRARY_PATH_modshare
+++ MANPATH_modshare=/usr/local/share/man:1:/cm/local/apps/environment-modules/4.5.3//share/man:1:/cm/local/apps/environment-modules/current/share/man:1:/apps/anaconda3-2025.06-0/share/man:1:/usr/share/man:1:/cm/local/apps/slurm/current/man:1
+++ export MANPATH_modshare
+++ CPATH_modshare=/apps/anaconda3-2025.06-0/include:1:/cm/local/apps/slurm/current/include:1
+++ export CPATH_modshare
+++ LD_LIBRARY_PATH_modshare=/cm/local/apps/mpc/1.3.1/lib:1:/cm/local/apps/gmp/6.3.0/lib:1:/cm/local/apps/gcc/14.2.0/lib64:1:/cm/local/apps/slurm/current/lib64/slurm:1:/cm/local/apps/mpfr/4.2.1/lib64:1:/cm/local/apps/gcc/14.2.0/lib32:1:/cm/local/apps/mpfr/4.2.1/lib32:1:/cm/local/apps/slurm/current/lib64:1:/cm/local/apps/mpfr/4.2.1/lib:1:/cm/local/apps/gcc/14.2.0/lib:1:/cm/local/apps/mpc/1.3.1/lib64:1:/cm/local/apps/gmp/6.3.0/lib64:1:/cm/local/apps/gmp/6.3.0/lib32:1:/cm/local/apps/mpc/1.3.1/lib32:1:/apps/anaconda3-2025.06-0/lib:1
+++ export LD_LIBRARY_PATH_modshare
+++ _LMFILES__modshare=/cm/local/modulefiles/gmp/6.3.0:1:/cm/local/modulefiles/mpc/1.3.1:1:/cm/shared/modulefiles/anaconda/25.5.1:1:/cm/local/modulefiles/slurm/slurm/24.11:1:/cm/local/modulefiles/mpfr/4.2.1:1:/cm/local/modulefiles/gcc/14.2.0:1
+++ export _LMFILES__modshare
+++ LOADEDMODULES_modshare=gmp/6.3.0:1:mpc/1.3.1:1:anaconda/25.5.1:1:slurm/slurm/24.11:1:mpfr/4.2.1:1:gcc/14.2.0:1
+++ export LOADEDMODULES_modshare
+++ PATH=/apps/anaconda3-2025.06-0/bin:/cm/local/apps/slurm/current/scripts:/cm/local/apps/slurm/current/sbin:/cm/local/apps/slurm/current/bin:/cm/local/apps/gcc/14.2.0/bin:/home/msai/changyan003/.local/bin:/home/msai/changyan003/bin:/cm/local/apps/environment-modules/4.5.3//bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/sbin:/cm/local/apps/environment-modules/4.5.3/bin
+++ export PATH
+++ PATH_modshare=/cm/local/apps/slurm/current/bin:1:/apps/anaconda3-2025.06-0/bin:1:/usr/bin:1:/cm/local/apps/slurm/current/sbin:1:/usr/local/bin:1:/home/msai/changyan003/.local/bin:1:/cm/local/apps/environment-modules/4.5.3//bin:1:/cm/local/apps/slurm/current/scripts:1:/cm/local/apps/gcc/14.2.0/bin:1:/sbin:1:/home/msai/changyan003/bin:1:/usr/sbin:1:/cm/local/apps/environment-modules/4.5.3/bin:1:/usr/local/sbin:1
+++ export PATH_modshare
+++ test 0
++ _mlstatus=0
++ '[' -n x ']'
++ IFS=' 	
+'
++ unset _mlre _mlv _mlrv _mlIFS
++ '[' -n '' ']'
++ unset _mlshdbg
++ return 0

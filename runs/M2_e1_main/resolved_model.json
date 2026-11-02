@@ -1,0 +1,24 @@
+{
+  "revision": "bce5d60d3b0c68318862270ec4e794d83308d80a",
+  "adapter_config": {
+    "peft_type": "BOTTLENECK",
+    "base_model_name_or_path": "openlm-research/open_llama_3b_v2",
+    "task_type": "CAUSAL_LM",
+    "inference_mode": false,
+    "bottleneck_size": 256,
+    "non_linearity": "tanh",
+    "adapter_dropout": 0.0,
+    "target_modules": [
+      "down_proj"
+    ],
+    "use_parallel_adapter": false,
+    "use_adapterp": true,
+    "scaling": 1.0,
+    "bias": "none",
+    "init_weights": "bert",
+    "modules_to_save": null
+  },
+  "trainable_parameters": 42598400,
+  "train_records": 6731,
+  "validation_records": 120
+}

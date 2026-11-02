@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/msai/changyan003/ai6130-ass2/source-v1/finetune.py", line 471, in <module>
+    fire.Fire(train)
+  File "/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/fire/core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/fire/core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/home/msai/changyan003/ai6130-ass2/env/lib/python3.10/site-packages/fire/core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/home/msai/changyan003/ai6130-ass2/source-v1/finetune.py", line 95, in train
+    run = Run(output_dir, settings, resume=bool(resume_from_checkpoint))
+  File "/home/msai/changyan003/ai6130-ass2/source-v1/experiment_utils.py", line 70, in __init__
+    raise ValueError('Output already used; resume explicitly or choose a fresh directory')
+ValueError: Output already used; resume explicitly or choose a fresh directory

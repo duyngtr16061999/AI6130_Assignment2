@@ -1,0 +1,22 @@
+COMPUTE CHECK PASSED: job=46900 hostname=TC2N02 allocated_nodes=TC2N02
+{
+  "records": 6851,
+  "data_sha256": "1949c230c668e3d484cbacd26f8a88cfdfa612f9c98af312861de5c83d7ce411",
+  "cutoff": 256,
+  "models": {
+    "openlm-research/open_llama_3b_v2": {
+      "revision": "bce5d60d3b0c68318862270ec4e794d83308d80a",
+      "max_tokens": 1695,
+      "mean_tokens": 289.0703546927456,
+      "truncated_records": 4024,
+      "input_alone_reaches_cutoff": 1
+    },
+    "TinyLlama/TinyLlama_v1.1": {
+      "revision": "ff3c701f2424c7625fdefb9dd470f45ef18b02d6",
+      "max_tokens": 1700,
+      "mean_tokens": 299.5149613195154,
+      "truncated_records": 4387,
+      "input_alone_reaches_cutoff": 2
+    }
+  }
+}
