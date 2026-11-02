@@ -1,6 +1,6 @@
 # AI6130 Assignment 2: Project specification
 
-**Status: proposed design for your revision. No code changes or GPU runs have been made.** Existing behavior was checked against the local scripts. Commands marked “planned” require the implementation below. Assignment scope and optional run counts remain in [ASSIGNMENT_REQUIREMENTS.md](ASSIGNMENT_REQUIREMENTS.md).
+**Status: original design retained for reference. Focused implementation is now in place; the authoritative commands and implemented behavior are in [SCHOOL_GPU_RUNBOOK.md](docs/SCHOOL_GPU_RUNBOOK.md). No school GPU jobs have been submitted. The original proposed `run_experiments.py` interface below was replaced with a smaller SLURM launcher, not implemented as a new framework.** Existing behavior was checked against the local scripts. Commands marked “planned” require the implementation below. Assignment scope and optional run counts remain in [ASSIGNMENT_REQUIREMENTS.md](ASSIGNMENT_REQUIREMENTS.md).
 
 ## 1. Goal and deliverables
 

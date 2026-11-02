@@ -1,5 +1,8 @@
 import os
 import sys
+import json
+import time
+from pathlib import Path
 from typing import List
 
 import fire
@@ -13,7 +16,8 @@ Unused imports:
 import torch.nn as nn
 import bitsandbytes as bnb
 """
-sys.path.append(os.path.join(os.getcwd(), "peft/src/"))
+sys.path.insert(0, str(Path(__file__).resolve().parent / "peft/src"))
+from experiment_utils import Run, atomic_json, append_json, digest, source_identity, checkpoint_manifest
 from peft import (  # noqa: E402
     LoraConfig,
     BottleneckConfig,
@@ -66,8 +70,50 @@ def train(
         wandb_run_name: str = "",
         wandb_watch: str = "",  # options: false | gradients | all
         wandb_log_model: str = "",  # options: false | true
-        resume_from_checkpoint: str = None,  # either training checkpoint or final adapter
+        resume_from_checkpoint: str = None,  # full recovery checkpoint, or "latest"
+        seed: int = 42,
+        max_steps: int = -1,  # short smoke tests; -1 uses num_epochs
+        warmup_steps: int = 100,
+        model_revision: str = "main",
+
 ):
+    settings = dict(locals())
+    settings.pop("resume_from_checkpoint")
+    settings["data_sha256"] = digest(data_path) if Path(data_path).is_file() else None
+    settings["source"] = source_identity()
+    settings["runtime"] = {"torch": torch.__version__, "transformers": transformers.__version__}
+    if int(os.environ.get("WORLD_SIZE", 1)) != 1:
+        raise ValueError("This recovery workflow supports one GPU/process only")
+    if batch_size <= 0 or micro_batch_size <= 0 or batch_size % micro_batch_size:
+        raise ValueError("batch_size must be a positive multiple of micro_batch_size")
+    if adapter_name not in ("lora", "bottleneck", "prefix-tuning"):
+        raise ValueError("Unknown adapter_name")
+    if use_adapterp and adapter_name != "bottleneck":
+        raise ValueError("AdapterP requires --adapter_name bottleneck")
+    if val_set_size > 0 and (eval_step <= 0 or save_step <= 0 or save_step % eval_step):
+        raise ValueError("save_step must be a positive multiple of eval_step")
+    run = Run(output_dir, settings, resume=bool(resume_from_checkpoint))
+    if (Path(output_dir) / "status.json").exists():
+        if json.loads((Path(output_dir) / "status.json").read_text()).get("state") == "complete":
+            raise ValueError("Training already complete; choose a new run for new settings")
+    run.status("running")
+    transformers.set_seed(seed)
+    if resume_from_checkpoint == "latest":
+        candidates = sorted(Path(output_dir).glob("checkpoint-*"),
+                            key=lambda p: int(p.name.split("-")[-1]), reverse=True)
+        resume_from_checkpoint = None
+        for candidate in candidates:
+            try:
+                checkpoint_manifest(candidate, verify=True)
+                resume_from_checkpoint = str(candidate)
+                break
+            except (ValueError, OSError):
+                run.event("invalid_checkpoint", path=str(candidate))
+        if resume_from_checkpoint is None:
+            raise ValueError("No verified checkpoint to resume; preserve this run and start a fresh directory")
+    if resume_from_checkpoint:
+        checkpoint_manifest(resume_from_checkpoint, verify=True)
+        run.event("resume_validated", checkpoint=resume_from_checkpoint)
     print(
         f"Finetuning model with params:\n"
         f"base_model: {base_model}\n"
@@ -116,6 +162,7 @@ def train(
     use_wandb = len(wandb_project) > 0 or (
             "WANDB_PROJECT" in os.environ and len(os.environ["WANDB_PROJECT"]) > 0
     )
+    use_wandb = use_wandb and os.environ.get("WANDB_MODE") != "disabled"
     # Only overwrite environ if wandb param passed
     if len(wandb_project) > 0:
         os.environ["WANDB_PROJECT"] = wandb_project
@@ -130,7 +177,7 @@ def train(
             load_in_8bit=load_8bit,
             torch_dtype=torch.float16,
             device_map=device_map,
-            trust_remote_code=True,
+            revision=model_revision,
         )
     else:
         model = AutoModelForCausalLM.from_pretrained(
@@ -138,18 +185,17 @@ def train(
             load_in_8bit=False,
             torch_dtype=torch.float16,
             device_map={"": int(os.environ.get("LOCAL_RANK") or 0)},
-            trust_remote_code=True,
+            revision=model_revision,
         )
 
     if model.config.model_type == "llama":
         # Due to the name of transformers' LlamaTokenizer, we have to do this
-        tokenizer = LlamaTokenizer.from_pretrained(base_model)
+        tokenizer = LlamaTokenizer.from_pretrained(base_model, revision=model_revision)
     else:
-        tokenizer = AutoTokenizer.from_pretrained(base_model, trust_remote_code=True)
+        tokenizer = AutoTokenizer.from_pretrained(base_model, revision=model_revision)
 
-    tokenizer.pad_token_id = (
-        0  # unk. we want this to be different from the eos token
-    )
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token_id = tokenizer.eos_token_id
     tokenizer.padding_side = "left"  # Allow batched inference
 
     def tokenize(prompt, add_eos_token=True):
@@ -194,7 +240,14 @@ def train(
         return tokenized_full_prompt
 
     model = prepare_model_for_int8_training(model, use_gradient_checkpointing=use_gradient_checkpointing)
+    if use_gradient_checkpointing and not load_8bit:
+        model.enable_input_require_grads()
+        model.gradient_checkpointing_enable()
     if adapter_name == "lora":
+        if lora_target_modules is not None:
+            if target_modules is not None and target_modules != lora_target_modules:
+                raise ValueError("Conflicting LoRA target-module arguments")
+            target_modules = lora_target_modules
         config = LoraConfig(
             r=lora_r,
             lora_alpha=lora_alpha,
@@ -229,55 +282,113 @@ def train(
     else:
         data = load_dataset(data_path)
 
-    if resume_from_checkpoint:
-        # Check the available weights and load them
-        checkpoint_name = os.path.join(
-            resume_from_checkpoint, "pytorch_model.bin"
-        )  # Full checkpoint
-        if not os.path.exists(checkpoint_name):
-            checkpoint_name = os.path.join(
-                resume_from_checkpoint, "adapter_model.bin"
-            )  # only LoRA model - LoRA config above has to fit
-            resume_from_checkpoint = (
-                False  # So the trainer won't try loading its state
-            )
-        # The two files above have a different name depending on how they were saved, but are actually the same.
-        if os.path.exists(checkpoint_name):
-            print(f"Restarting from {checkpoint_name}")
-            adapters_weights = torch.load(checkpoint_name)
-            model = set_peft_model_state_dict(model, adapters_weights)
-        else:
-            print(f"Checkpoint {checkpoint_name} not found")
-
     model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
 
+    data["train"] = data["train"].add_column("_example_id", list(range(len(data["train"]))))
     if val_set_size > 0:
         train_val = data["train"].train_test_split(
-            test_size=val_set_size, shuffle=True, seed=42
+            test_size=val_set_size, shuffle=True, seed=seed
         )
         train_data = (
-            train_val["train"].shuffle().map(generate_and_tokenize_prompt)
+            train_val["train"].shuffle(seed=seed).map(generate_and_tokenize_prompt)
         )
         val_data = (
-            train_val["test"].shuffle().map(generate_and_tokenize_prompt)
+            train_val["test"].shuffle(seed=seed).map(generate_and_tokenize_prompt)
         )
     else:
-        train_data = data["train"].shuffle().map(generate_and_tokenize_prompt)
+        train_data = data["train"].shuffle(seed=seed).map(generate_and_tokenize_prompt)
         val_data = None
+
+    atomic_json(Path(output_dir) / "split.json", {
+        "train_ids": train_data["_example_id"],
+        "validation_ids": val_data["_example_id"] if val_data is not None else [],
+    })
 
     if not ddp and torch.cuda.device_count() > 1:
         # keeps Trainer from trying its own DataParallelism when more than 1 gpu is available
         model.is_parallelizable = True
         model.model_parallel = True
 
-    trainer = transformers.Trainer(
+    if not train_on_inputs:
+        for split in (train_data, val_data):
+            if split is not None and any(all(x == -100 for x in row["labels"]) for row in split):
+                raise ValueError("cutoff_len masks entire target; increase cutoff_len")
+    atomic_json(Path(output_dir) / "resolved_model.json", {
+        "revision": getattr(model.config, "_commit_hash", None),
+        "adapter_config": dict(model.peft_config.__dict__),
+        "trainable_parameters": sum(p.numel() for p in model.parameters() if p.requires_grad),
+        "train_records": len(train_data), "validation_records": len(val_data) if val_data else 0,
+    })
+    class Persistence(transformers.TrainerCallback):
+        def on_log(self, args, state, control, logs=None, **kwargs):
+            append_json(Path(output_dir) / "metrics.jsonl", {"step": state.global_step,
+                        "epoch": state.epoch, **(logs or {})})
+
+        def on_step_end(self, args, state, control, **kwargs):
+            if run.stopped:
+                control.should_save = True
+                control.should_training_stop = True
+            return control
+
+        def on_save(self, args, state, control, **kwargs):
+            directory = Path(output_dir) / f"checkpoint-{state.global_step}"
+            if trainer.accelerator.scaler is not None and not (directory / "scaler.pt").exists():
+                raise ValueError("FP16 recovery checkpoint is missing scaler state")
+            checkpoint_manifest(directory)
+            run.event("checkpoint_committed", step=state.global_step, path=str(directory))
+
+        def on_epoch_end(self, args, state, control, **kwargs):
+            # Do not label an interrupted partial epoch as a full epoch snapshot.
+            if not run.stopped and state.epoch and abs(state.epoch - round(state.epoch)) < 1e-6:
+                directory = Path(output_dir) / "epochs" / f"epoch-{round(state.epoch)}"
+                model.save_pretrained(str(directory))
+                tokenizer.save_pretrained(str(directory))
+
+    class AdapterTrainer(transformers.Trainer):
+        def _save(self, output_dir=None, state_dict=None):
+            # One consistent recovery format, regardless of Trainer's PEFT detection.
+            directory = Path(output_dir or self.args.output_dir)
+            directory.mkdir(parents=True, exist_ok=True)
+            weights = get_peft_model_state_dict(self.model, state_dict)
+            torch.save(weights, directory / "pytorch_model.bin")
+            self.model.peft_config.save_pretrained(str(directory))
+            tokenizer.save_pretrained(str(directory))
+            torch.save(self.args, directory / "training_args.bin")
+
+        # Old custom PEFT is not recognized by every Trainer's adapter loader.
+        def _load_from_checkpoint(self, checkpoint, model=None):
+            checkpoint_manifest(checkpoint, verify=True)
+            weights = torch.load(Path(checkpoint) / "pytorch_model.bin", map_location="cpu")
+            set_peft_model_state_dict(model or self.model, weights)
+
+        def _save_optimizer_and_scheduler(self, output_dir):
+            super()._save_optimizer_and_scheduler(output_dir)
+            if self.accelerator.scaler is not None:
+                torch.save(self.accelerator.scaler.state_dict(), Path(output_dir) / "scaler.pt")
+
+        def _load_optimizer_and_scheduler(self, checkpoint):
+            super()._load_optimizer_and_scheduler(checkpoint)
+            if checkpoint and self.accelerator.scaler is not None:
+                scaler = Path(checkpoint) / "scaler.pt"
+                if not scaler.exists():
+                    raise ValueError("FP16 recovery checkpoint is missing scaler state")
+                self.accelerator.scaler.load_state_dict(torch.load(scaler, map_location="cpu"))
+
+        def _load_best_model(self):
+            self._load_from_checkpoint(self.state.best_model_checkpoint)
+
+    trainer = AdapterTrainer(
         model=model,
         train_dataset=train_data,
         eval_dataset=val_data,
         args=transformers.TrainingArguments(
             per_device_train_batch_size=micro_batch_size,
             gradient_accumulation_steps=gradient_accumulation_steps,
-            warmup_steps=100,
+            warmup_steps=warmup_steps,
+            seed=seed,
+            data_seed=seed,
+            max_steps=max_steps,
+            save_safetensors=False,
             num_train_epochs=num_epochs,
             learning_rate=learning_rate,
             fp16=True,
@@ -292,9 +403,10 @@ def train(
             load_best_model_at_end=True if val_set_size > 0 else False,
             ddp_find_unused_parameters=False if ddp else None,
             group_by_length=group_by_length,
-            report_to="wandb" if use_wandb else None,
+            report_to="wandb" if use_wandb else "none",
             run_name=wandb_run_name if use_wandb else None,
         ),
+        callbacks=[Persistence()],
         data_collator=transformers.DataCollatorForSeq2Seq(
             tokenizer, pad_to_multiple_of=8, return_tensors="pt", padding=True
         ),
@@ -308,12 +420,24 @@ def train(
         )
     ).__get__(model, type(model))
 
-    if torch.__version__ >= "2" and sys.platform != "win32":
-        model = torch.compile(model)
-
-    trainer.train(resume_from_checkpoint=resume_from_checkpoint)
-
-    model.save_pretrained(output_dir)
+    try:
+        trainer.train(resume_from_checkpoint=resume_from_checkpoint)
+        trainer.save_state()
+        if run.stopped:
+            run.status("interrupted", step=trainer.state.global_step)
+            raise SystemExit(75)
+        final_dir = Path(output_dir) / "final_adapter"
+        model.save_pretrained(str(final_dir))
+        tokenizer.save_pretrained(str(final_dir))
+        run.status("complete", step=trainer.state.global_step,
+                   best_checkpoint=trainer.state.best_model_checkpoint,
+                   final_adapter=str(final_dir),
+                   peak_gpu_bytes=torch.cuda.max_memory_allocated() if torch.cuda.is_available() else None)
+    except Exception as error:
+        run.status("failed", error=str(error))
+        raise
+    finally:
+        run.close()
 
     print(
         "\n If there's a warning about missing keys above, please disregard :)"

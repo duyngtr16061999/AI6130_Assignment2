@@ -1,3 +1,5 @@
+> **School A40 workflow:** see [SCHOOL_GPU_RUNBOOK.md](docs/SCHOOL_GPU_RUNBOOK.md) for the pinned environment, SLURM commands, checkpoints and resumable evaluation. Use `requirements-a40.txt` for that workflow.
+
 <h3 align="center">
     <p>Assignment 2: Parameter-Efficient Fine-Tuning of Large Language Models </p>
 </h3>

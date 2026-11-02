@@ -1,0 +1,11 @@
+# Python 3.10; install torch separately with the CUDA wheel command in SCHOOL_GPU_RUNBOOK.md.
+transformers==4.38.0
+accelerate==0.28.0
+datasets==2.18.0
+huggingface-hub==0.25.2
+numpy==1.26.4
+pyarrow==15.0.2
+fire==0.6.0
+sentencepiece==0.2.0
+protobuf==4.25.3
+bitsandbytes==0.43.0
